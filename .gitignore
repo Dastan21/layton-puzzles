@@ -1,0 +1,12 @@
+node_modules
+dist
+
+
+public/cores/*
+public/roms/*
+public/states/*
+public/saves/
+!public/**/*.md
+
+public/**/puzzles/
+public/**/minigames/

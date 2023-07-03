@@ -1,0 +1,1139 @@
+{
+  "id": "PL1",
+  "name": "Professeur Layton et l'Étrange Village",
+  "puzzles": [
+    {
+      "number": "001",
+      "name": "Le village mystérieux",
+      "givenBy": "Professeur Layton",
+      "solvedBy": "Luke Triton",
+      "location": "Sur la route",
+      "type": "Entourer la réponse",
+      "picarats": 10
+    },
+    {
+      "number": "002",
+      "name": "La manivelle",
+      "givenBy": "Franck",
+      "solvedBy": "Professeur Layton",
+      "location": "Pont-levis",
+      "type": "QCM",
+      "picarats": 15
+    },
+    {
+      "number": "003",
+      "name": "Hauts-de-forme",
+      "givenBy": "Ingrid",
+      "solvedBy": "Professeur Layton",
+      "location": "Entrée du village",
+      "type": "QCM",
+      "picarats": 10
+    },
+    {
+      "number": "004",
+      "name": "Où est ma maison ?",
+      "givenBy": "Percy",
+      "solvedBy": "Professeur Layton",
+      "location": "Grand-place",
+      "type": "Entourer la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "005",
+      "name": "Contre-la-montre",
+      "givenBy": "Professeur Layton",
+      "solvedBy": "Luke Triton",
+      "location": "Grand-place",
+      "type": "Inscrire la réponse",
+      "picarats": 50
+    },
+    {
+      "number": "006",
+      "name": "Le poids plume",
+      "givenBy": "Marco",
+      "solvedBy": "Professeur Layton",
+      "location": "Route du manoir",
+      "type": "Poids et balance",
+      "picarats": 40
+    },
+    {
+      "number": "007",
+      "name": "La traversée (1)",
+      "solvedBy": "Professeur Layton",
+      "location": "Étang du manoir",
+      "type": "Rivière",
+      "picarats": 50
+    },
+    {
+      "number": "008",
+      "name": "Ensemencement",
+      "solvedBy": "Luke Triton",
+      "location": "Étang du manoir",
+      "type": "Inscrire la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "009",
+      "name": "Paf le chien !",
+      "solvedBy": "Professeur Layton",
+      "location": "Vestibule du manoir",
+      "type": "Allumettes",
+      "picarats": 35
+    },
+    {
+      "number": "010",
+      "name": "Équations mystère",
+      "solvedBy": "Luke Triton",
+      "location": "Vestibule du manoir",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "011",
+      "name": "Un peu de géométrie",
+      "solvedBy": "Professeur Layton",
+      "location": "Salon du manoir",
+      "type": "Inscrire la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "012",
+      "name": "Découpage",
+      "givenBy": "Gordon",
+      "solvedBy": "Professeur Layton",
+      "location": "Salon du manoir",
+      "type": "Tracé de traits",
+      "picarats": 40
+    },
+    {
+      "number": "013",
+      "name": "Naufrage",
+      "solvedBy": "Professeur Layton",
+      "location": "Étang du manoir",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "014",
+      "name": "La bonne chaise",
+      "solvedBy": "Luke Triton",
+      "location": "Magasin",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "015",
+      "name": "Dîner aux chandelles",
+      "solvedBy": "Luke Triton",
+      "location": "Magasin",
+      "type": "Inscrire la réponse",
+      "picarats": 10
+    },
+    {
+      "number": "016",
+      "name": "Triangles à l'encre",
+      "solvedBy": "Professeur Layton",
+      "location": "Mairie",
+      "type": "Inscrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "017",
+      "name": "Tapis vert",
+      "givenBy": "Stachenscarfen",
+      "solvedBy": "Luke Triton",
+      "location": "Entrée du village",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "018",
+      "name": "En un coup de balai",
+      "givenBy": "Béatrice",
+      "solvedBy": "Professeur Layton",
+      "location": "Hôtel",
+      "type": "Allumettes",
+      "picarats": 10
+    },
+    {
+      "number": "019",
+      "name": "Embouteillages",
+      "solvedBy": "Luke Triton",
+      "location": "Pont-levis",
+      "type": "Déplacements",
+      "picarats": 30
+    },
+    {
+      "number": "020",
+      "name": "Conflits de voisinage",
+      "solvedBy": "Professeur Layton",
+      "location": "Route du parc",
+      "type": "Tracé de traits",
+      "picarats": 50
+    },
+    {
+      "number": "021",
+      "name": "Histoire de gélules",
+      "solvedBy": "Professeur Layton",
+      "location": "Route du parc",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "022",
+      "name": "La paix des cochons",
+      "solvedBy": "Luke Triton",
+      "location": "Route du parc",
+      "type": "Tracé de traits",
+      "picarats": 30
+    },
+    {
+      "number": "023",
+      "name": "Problème juteux",
+      "solvedBy": "Professeur Layton",
+      "location": "Restaurant",
+      "type": "Récipients",
+      "picarats": 40
+    },
+    {
+      "number": "024",
+      "name": "Problème lacté",
+      "givenBy": "Michel",
+      "solvedBy": "Luke Triton",
+      "location": "Restaurant",
+      "type": "Récipients",
+      "picarats": 50
+    },
+    {
+      "number": "025",
+      "name": "Triangle équilatéral",
+      "solvedBy": "Professeur Layton",
+      "location": "Restaurant",
+      "type": "Placer les éléments",
+      "picarats": 25
+    },
+    {
+      "number": "026",
+      "name": "Dans le Petri",
+      "solvedBy": "Luke Triton",
+      "location": "Grille du parc",
+      "type": "Inscrire la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "027",
+      "name": "Chamailleries",
+      "solvedBy": "Luke Triton",
+      "location": "Salon du manoir",
+      "type": "Placer les éléments",
+      "picarats": 40
+    },
+    {
+      "number": "028",
+      "name": "Le point noir",
+      "solvedBy": "Professeur Layton",
+      "location": "Salon du manoir",
+      "type": "Entourer la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "029",
+      "name": "Suspects habituels",
+      "givenBy": "Inspecteur Chelmey",
+      "solvedBy": "Professeur Layton",
+      "location": "Salon du manoir",
+      "type": "Inscrire la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "030",
+      "name": "D'un seul trait (1)",
+      "givenBy": "Agnès",
+      "solvedBy": "Professeur Layton",
+      "location": "Étang du manoir",
+      "type": "Entourer la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "031",
+      "name": "Course hippique",
+      "givenBy": "Marco",
+      "solvedBy": "Professeur Layton",
+      "location": "Route du manoir",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "032",
+      "name": "Partage gourmand",
+      "solvedBy": "Luke Triton",
+      "location": "Magasin",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "033",
+      "name": "Allumer le feu",
+      "givenBy": "Hershel Layton",
+      "solvedBy": "Luke Triton",
+      "location": "Magasin",
+      "type": "Entourer la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "034",
+      "name": "Tas de feuilles",
+      "givenBy": "Percy",
+      "solvedBy": "Professeur Layton",
+      "location": "Grand-place",
+      "type": "Inscrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "035",
+      "name": "De drôles de points",
+      "givenBy": "Max",
+      "solvedBy": "Professeur Layton",
+      "location": "Grand-place",
+      "type": "Inscrire la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "036",
+      "name": "Trop de souris",
+      "givenBy": "Professeur Layton",
+      "solvedBy": "Luke Triton",
+      "location": "Tour de l'horloge",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "037",
+      "name": "Affaires de famille",
+      "givenBy": "Lucy",
+      "solvedBy": "Professeur Layton",
+      "location": "Tour de l'horloge",
+      "type": "Inscrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "038",
+      "name": "Le pont les îles Kwaï",
+      "givenBy": "Zappone",
+      "solvedBy": "Professeur Layton",
+      "location": "Croisement",
+      "type": "Tracé de traits",
+      "picarats": 20
+    },
+    {
+      "number": "039",
+      "name": "D'un seul trait (2)",
+      "givenBy": "Agnès",
+      "solvedBy": "Luke Triton",
+      "location": "Croisement",
+      "type": "Entourer la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "040",
+      "name": "L'âge de mon père",
+      "givenBy": "Archibald",
+      "solvedBy": "Professeur Layton",
+      "location": "Marché",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "041",
+      "name": "Pièces jaunes",
+      "givenBy": "Gérard",
+      "solvedBy": "Professeur Layton",
+      "location": "Ruelle nord",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "042",
+      "name": "Marché équitable",
+      "givenBy": "Gérard",
+      "solvedBy": "Professeur Layton",
+      "location": "Ruelle nord",
+      "type": "Inscrire la réponse",
+      "picarats": 50
+    },
+    {
+      "number": "043",
+      "name": "Les trois parapluies",
+      "givenBy": "Lucy",
+      "solvedBy": "Professeur Layton",
+      "location": "Tour de l'horloge",
+      "type": "Inscrire la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "044",
+      "name": "Intrigue timbrée",
+      "givenBy": "Rodney",
+      "solvedBy": "Professeur Layton",
+      "location": "Mairie",
+      "type": "Tracé de traits",
+      "picarats": 50
+    },
+    {
+      "number": "045",
+      "name": "Pesée lunaire",
+      "givenBy": "Adrea",
+      "solvedBy": "Professeur Layton",
+      "location": "Route du parc",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "046",
+      "name": "À la belle étoile",
+      "givenBy": "Max",
+      "solvedBy": "Professeur Layton",
+      "location": "Grille du parc",
+      "type": "Inscrire la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "047",
+      "name": "En cavale",
+      "givenBy": "Gérard",
+      "solvedBy": "Professeur Layton",
+      "location": "Grand-place",
+      "type": "Entourer la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "048",
+      "name": "Chasse aux souris",
+      "givenBy": "Professeur Layton",
+      "solvedBy": "Luke Triton",
+      "location": "Tour de l'horloge",
+      "type": "Inscrire la réponse",
+      "picarats": 25
+    },
+    {
+      "number": "049",
+      "name": "1000 fois",
+      "givenBy": "Lucy",
+      "solvedBy": "Professeur Layton",
+      "location": "Tour de l'horloge",
+      "type": "Inscrire la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "050",
+      "name": "Dédale numérique",
+      "givenBy": "Marco",
+      "solvedBy": "Professeur Layton",
+      "location": "Croisement",
+      "type": "Entourer la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "051",
+      "name": "Mise en plis",
+      "givenBy": "Zappone",
+      "solvedBy": "Luke Triton",
+      "location": "Café",
+      "type": "QCM",
+      "picarats": 10
+    },
+    {
+      "number": "052",
+      "name": "Cherchez l'étoile",
+      "givenBy": "Paulo",
+      "solvedBy": "Luke Triton",
+      "location": "Ruelle nord",
+      "type": "Chercher la figure",
+      "picarats": 30
+    },
+    {
+      "number": "053",
+      "name": "En queue de poisson",
+      "givenBy": "Agnès",
+      "solvedBy": "Luke Triton",
+      "location": "Marché",
+      "type": "QCM",
+      "picarats": 35
+    },
+    {
+      "number": "054",
+      "name": "Gare au monstre !",
+      "givenBy": "Giuseppe",
+      "solvedBy": "Luke Triton",
+      "location": "Marché",
+      "type": "Placer les éléments",
+      "picarats": 20
+    },
+    {
+      "number": "055",
+      "name": "Drôle de sandwich",
+      "givenBy": "Béatrice",
+      "solvedBy": "Professeur Layton",
+      "location": "Hôtel",
+      "type": "Inscrire la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "056",
+      "name": "Le moindre effort",
+      "givenBy": "Stachenscarfen",
+      "solvedBy": "Professeur Layton",
+      "location": "Entrée du village",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "057",
+      "name": "Trop d'anneaux",
+      "givenBy": "Max",
+      "solvedBy": "Professeur Layton",
+      "location": "Grand-place",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "058",
+      "name": "Boule perdue (1)",
+      "solvedBy": "Luke Triton",
+      "location": "Grand-place",
+      "type": "Déplacements",
+      "picarats": 30
+    },
+    {
+      "number": "059",
+      "name": "Randonnée urbaine",
+      "givenBy": "Marco",
+      "solvedBy": "Professeur Layton",
+      "location": "Route du manoir",
+      "type": "Itinéraire",
+      "picarats": 50
+    },
+    {
+      "number": "060",
+      "name": "Chat balance...",
+      "givenBy": "Professeur Layton",
+      "solvedBy": "Luke Triton",
+      "location": "Manoir Reinhold",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "061",
+      "name": "Croix de bois...",
+      "givenBy": "Gordon",
+      "solvedBy": "Professeur Layton",
+      "location": "Salon du manoir",
+      "type": "Pêle-Mêle",
+      "picarats": 40
+    },
+    {
+      "number": "062",
+      "name": "Legs peu commun",
+      "givenBy": "Inspecteur Chelmey",
+      "solvedBy": "Professeur Layton",
+      "location": "Salon du manoir",
+      "type": "Inscrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "063",
+      "name": "L'âge de ma mère",
+      "givenBy": "Dahlia Reinhold",
+      "solvedBy": "Professeur Layton",
+      "location": "Salon du manoir",
+      "type": "Inscrire la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "064",
+      "name": "Inéquations ?",
+      "solvedBy": "Professeur Layton",
+      "location": "Mairie",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "065",
+      "name": "La valeur secrète",
+      "solvedBy": "Professeur Layton",
+      "location": "Tour de l'horloge",
+      "type": "Inscrire la réponse",
+      "picarats": 50
+    },
+    {
+      "number": "066",
+      "name": "Endettement",
+      "solvedBy": "Professeur Layton",
+      "location": "Tour de l'horloge",
+      "type": "Entourer la réponse",
+      "picarats": 60
+    },
+    {
+      "number": "067",
+      "name": "Combien de bonbons?",
+      "solvedBy": "Professeur Layton",
+      "location": "Tour de l'horloge",
+      "type": "Inscrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "068",
+      "name": "Pentagones cachés",
+      "solvedBy": "Professeur Layton",
+      "location": "Ruelle nord",
+      "type": "Inscrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "069",
+      "name": "Tablette de chocolat",
+      "solvedBy": "Professeur Layton",
+      "location": "Chez Prosciutto",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "070",
+      "name": "Éclats de vase",
+      "solvedBy": "Luke Triton",
+      "location": "Marché",
+      "type": "Placer les éléments",
+      "picarats": 10
+    },
+    {
+      "number": "071",
+      "name": "Vol de saucisses",
+      "solvedBy": "Luke Triton",
+      "location": "Marché",
+      "type": "QCM",
+      "picarats": 40
+    },
+    {
+      "number": "072",
+      "name": "Propos fallacieux",
+      "solvedBy": "Luke Triton",
+      "location": "Grand-place",
+      "type": "QCM",
+      "picarats": 40
+    },
+    {
+      "number": "073",
+      "name": "Histoire de carrés",
+      "solvedBy": "Professeur Layton",
+      "location": "Mairie",
+      "type": "Pêle-Mêle",
+      "picarats": 40
+    },
+    {
+      "number": "074",
+      "name": "Une vitre cassée",
+      "solvedBy": "Professeur Layton",
+      "location": "Marché",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "075",
+      "name": "Avec du fil de fer",
+      "solvedBy": "Professeur Layton",
+      "location": "Marché",
+      "type": "Inscrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "076",
+      "name": "Les quatre jardins",
+      "solvedBy": "Professeur Layton",
+      "location": "Route du parc",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "077",
+      "name": "Offres d'emploi",
+      "solvedBy": "Luke Triton",
+      "location": "Route du parc",
+      "type": "QCM",
+      "picarats": 20
+    },
+    {
+      "number": "078",
+      "name": "Problème aqueux",
+      "solvedBy": "Professeur Layton",
+      "location": "Restaurant",
+      "type": "Récipients",
+      "picarats": 60
+    },
+    {
+      "number": "079",
+      "name": "Transfert de fruits",
+      "solvedBy": "Professeur Layton",
+      "location": "Restaurant",
+      "type": "Déplacements",
+      "picarats": 40
+    },
+    {
+      "number": "080",
+      "name": "Dames en folie (1)",
+      "solvedBy": "Luke Triton",
+      "location": "Restaurant",
+      "type": "Échecs",
+      "picarats": 20
+    },
+    {
+      "number": "081",
+      "name": "Dames en folie (2)",
+      "solvedBy": "Luke Triton",
+      "location": "Restaurant",
+      "type": "Échecs",
+      "picarats": 40
+    },
+    {
+      "number": "082",
+      "name": "Dames en folie (3)",
+      "solvedBy": "Luke Triton",
+      "location": "Restaurant",
+      "type": "Échecs",
+      "picarats": 60
+    },
+    {
+      "number": "083",
+      "name": "Dames en folie (4)",
+      "solvedBy": "Luke Triton",
+      "location": "Restaurant",
+      "type": "Échecs",
+      "picarats": 80
+    },
+    {
+      "number": "084",
+      "name": "Déménagement",
+      "solvedBy": "Professeur Layton",
+      "location": "Sortie des égouts",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "085",
+      "name": "Le pont et le train",
+      "solvedBy": "Luke Triton",
+      "location": "Bord de l'eau",
+      "type": "Inscrire la réponse",
+      "picarats": 50
+    },
+    {
+      "number": "086",
+      "name": "Circonscrits",
+      "solvedBy": "Professeur Layton",
+      "location": "Égouts est",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "087",
+      "name": "La grande roue",
+      "solvedBy": "Luke Triton",
+      "location": "Grande roue",
+      "type": "Inscrire la réponse",
+      "picarats": 50
+    },
+    {
+      "number": "088",
+      "name": "Fuite de réservoir",
+      "solvedBy": "Professeur Layton",
+      "location": "Chemin de la cabane",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "089",
+      "name": "À la croisée...",
+      "solvedBy": "Professeur Layton",
+      "location": "Sous la cabane",
+      "type": "Chercher la figure",
+      "picarats": 30
+    },
+    {
+      "number": "090",
+      "name": "Boule perdue (2)",
+      "solvedBy": "Luke Triton",
+      "location": "Passage souterrain",
+      "type": "Déplacements",
+      "picarats": 50
+    },
+    {
+      "number": "091",
+      "name": "Pour quel motif?",
+      "solvedBy": "Professeur Layton",
+      "location": "Souterrain",
+      "type": "QCM",
+      "picarats": 40
+    },
+    {
+      "number": "092",
+      "name": "Ablutions matinales",
+      "solvedBy": "Luke Triton",
+      "location": "Égouts est",
+      "type": "Labyrinthe",
+      "picarats": 30
+    },
+    {
+      "number": "093",
+      "name": "La traversée (2)",
+      "solvedBy": "Luke Triton",
+      "location": "Étang du manoir",
+      "type": "Rivière",
+      "picarats": 30
+    },
+    {
+      "number": "094",
+      "name": "Boule perdue (4)",
+      "solvedBy": "Luke Triton",
+      "location": "Tour - RDC",
+      "type": "Déplacements",
+      "picarats": 70
+    },
+    {
+      "number": "095",
+      "name": "Carré magique",
+      "solvedBy": "Luke Triton",
+      "location": "Tour - 1er étage",
+      "type": "Placer les éléments",
+      "picarats": 60
+    },
+    {
+      "number": "096",
+      "name": "Dans les escaliers",
+      "solvedBy": "Professeur Layton",
+      "location": "Tour - 2e étage",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "097",
+      "name": "Fuite royale (1)",
+      "solvedBy": "Luke Triton",
+      "location": "Tour - 3e étage",
+      "type": "Déplacements",
+      "picarats": 60
+    },
+    {
+      "number": "098",
+      "name": "Suite de cartes",
+      "solvedBy": "Luke Triton",
+      "location": "Tour - 4e étage",
+      "type": "Placer les éléments",
+      "picarats": 70
+    },
+    {
+      "number": "099",
+      "name": "33 333",
+      "solvedBy": "Luke Triton",
+      "location": "Tour - 5e étage",
+      "type": "Placer les éléments",
+      "picarats": 70
+    },
+    {
+      "number": "100",
+      "name": "33 333",
+      "solvedBy": "Luke Triton",
+      "location": "Tour - 6e étage",
+      "type": "Pêle-Mêle",
+      "picarats": 70
+    },
+    {
+      "number": "101",
+      "name": "Dés-section",
+      "solvedBy": "Luke Triton",
+      "location": "Marché",
+      "type": "Inscrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "102",
+      "name": "As et joker",
+      "solvedBy": "Professeur Layton",
+      "location": "Route de la tour",
+      "type": "Inscrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "103",
+      "name": "As et joker",
+      "solvedBy": "Professeur Layton",
+      "location": "Salon du manoir",
+      "type": "Tracé de traits",
+      "picarats": 40
+    },
+    {
+      "number": "104",
+      "name": "Chocolat et amandes",
+      "solvedBy": "Professeur Layton",
+      "location": "Chez Prosciutto",
+      "type": "Tracé de traits",
+      "picarats": 30
+    },
+    {
+      "number": "105",
+      "name": "Les dés sont jetés!",
+      "solvedBy": "Professeur Layton",
+      "location": "Route de la tour",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "106",
+      "name": "Trop de verres",
+      "solvedBy": "Luke Triton",
+      "location": "Café",
+      "type": "Inscrire la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "107",
+      "name": "Ver pomme",
+      "solvedBy": "Luke Triton",
+      "location": "Tour de l'horloge",
+      "type": "Déplacements",
+      "picarats": 30
+    },
+    {
+      "number": "108",
+      "name": "Le nœud du problème",
+      "solvedBy": "Luke Triton",
+      "location": "Chez Archibald",
+      "type": "QCM",
+      "picarats": 50
+    },
+    {
+      "number": "109",
+      "name": "Paresse en détresse",
+      "solvedBy": "Professeur Layton",
+      "location": "Chez Archibald",
+      "type": "Recherche",
+      "picarats": 30
+    },
+    {
+      "number": "110",
+      "name": "Un cube de trop",
+      "solvedBy": "Luke Triton",
+      "location": "Salon du manoir",
+      "type": "Allumettes",
+      "picarats": 20
+    },
+    {
+      "number": "111",
+      "name": "Puzzle",
+      "solvedBy": "Luke Triton",
+      "location": "Route du parc",
+      "type": "Entourer la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "112",
+      "name": "Splendeur",
+      "solvedBy": "Luke Triton",
+      "location": "Hôtel",
+      "type": "Placer les éléments",
+      "picarats": 50
+    },
+    {
+      "number": "113",
+      "name": "Quelle ménagerie!",
+      "solvedBy": "Luke Triton",
+      "location": "Entrée du village",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "114",
+      "name": "La pyramide déguisée",
+      "solvedBy": "Luke Triton",
+      "location": "Chez Prosciutto",
+      "type": "QCM",
+      "picarats": 20
+    },
+    {
+      "number": "115",
+      "name": "Le cube intrus",
+      "solvedBy": "Luke Triton",
+      "location": "Chapiteau abandonné",
+      "type": "Entourer la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "116",
+      "name": "Le plus grand total",
+      "solvedBy": "Luke Triton",
+      "location": "Chemin de la cabane",
+      "type": "Inscrire la réponse",
+      "picarats": 50
+    },
+    {
+      "number": "117",
+      "name": "Cubbe à peindre",
+      "solvedBy": "Luke Triton",
+      "location": "Route de la tour",
+      "type": "Inscrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "118",
+      "name": "En rouge et noir...",
+      "solvedBy": "Luke Triton",
+      "location": "Mairie",
+      "type": "Inscrire la réponse",
+      "picarats": 50
+    },
+    {
+      "number": "119",
+      "name": "En rouge et bleu (1)",
+      "solvedBy": "Luke Triton",
+      "location": "Passage sombre",
+      "type": "Déplacements",
+      "picarats": 40
+    },
+    {
+      "number": "120",
+      "name": "Boule perdue (3)",
+      "solvedBy": "Luke Triton",
+      "location": "Égouts",
+      "type": "Déplacements",
+      "picarats": 60
+    },
+    {
+      "number": "121",
+      "name": "Au cœur du drapeau",
+      "solvedBy": "Luke Triton",
+      "location": "Défis du professeur",
+      "type": "Inscrire la réponse",
+      "picarats": 60
+    },
+    {
+      "number": "122",
+      "name": "Suite de dés",
+      "solvedBy": "Luke Triton",
+      "location": "Défis du professeur",
+      "type": "QCM",
+      "picarats": 60
+    },
+    {
+      "number": "123",
+      "name": "Tant de triangles!",
+      "solvedBy": "Luke Triton",
+      "location": "Défis du professeur",
+      "type": "Inscrire la réponse",
+      "picarats": 60
+    },
+    {
+      "number": "124",
+      "name": "Marée haute",
+      "solvedBy": "Luke Triton",
+      "location": "Défis du professeur",
+      "type": "Inscrire la réponse",
+      "picarats": 50
+    },
+    {
+      "number": "125",
+      "name": "Dé codé",
+      "solvedBy": "Luke Triton",
+      "location": "Défis du professeur",
+      "type": "Inscrire la réponse",
+      "picarats": 60
+    },
+    {
+      "number": "126",
+      "name": "En rouge et bleu (2)",
+      "solvedBy": "Luke Triton",
+      "location": "Défis du professeur",
+      "type": "Déplacements",
+      "picarats": 70
+    },
+    {
+      "number": "127",
+      "name": "Périmètre en mètres",
+      "solvedBy": "Luke Triton",
+      "location": "Défis du professeur",
+      "type": "Inscrire la réponse",
+      "picarats": 70
+    },
+    {
+      "number": "128",
+      "name": "Chiffres clé",
+      "solvedBy": "Luke Triton",
+      "location": "Défis du professeur",
+      "type": "Placer les éléments",
+      "picarats": 70
+    },
+    {
+      "number": "129",
+      "name": "Boules et billes",
+      "solvedBy": "Luke Triton",
+      "location": "Défis du professeur",
+      "type": "Déplacements",
+      "picarats": 70
+    },
+    {
+      "number": "130",
+      "name": "Dames en folie (5)",
+      "solvedBy": "Luke Triton",
+      "location": "Défis du professeur",
+      "type": "Échecs",
+      "picarats": 99
+    },
+    {
+      "number": "131",
+      "name": "Le poids mystère",
+      "solvedBy": "Luke Triton",
+      "location": "Défis du professeur",
+      "type": "Poids et balance",
+      "picarats": 99
+    },
+    {
+      "number": "132",
+      "name": "Fuite royale (2)",
+      "solvedBy": "Luke Triton",
+      "location": "Défis du professeur",
+      "type": "Déplacements",
+      "picarats": 80
+    },
+    {
+      "number": "133",
+      "name": "Opérations en série",
+      "solvedBy": "Luke Triton",
+      "location": "Défis du professeur",
+      "type": "Placer les éléments",
+      "picarats": 70
+    },
+    {
+      "number": "134",
+      "name": "Règlement à l'amiable",
+      "solvedBy": "Luke Triton",
+      "location": "Défis du professeur",
+      "type": "Tracé de traits",
+      "picarats": 80
+    },
+    {
+      "number": "135",
+      "name": "Fuite royale (3)",
+      "solvedBy": "Luke Triton",
+      "location": "Défis du professeur",
+      "type": "Déplacements",
+      "picarats": 99
+    }
+  ],
+  "minigames": [
+    {
+      "id": "hotel",
+      "name": "Hôtel"
+    },
+    {
+      "id": "tableau",
+      "name": "Tableau"
+    }
+  ]
+}

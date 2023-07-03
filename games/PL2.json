@@ -1,0 +1,1357 @@
+{
+  "id": "PL2",
+  "name": "Professeur Layton et la Boîte de Pandore",
+  "puzzles": [
+    {
+      "number": "001",
+      "name": "Un mauvais plan",
+      "givenBy": "Professeur Layton",
+      "solvedBy": "Luke Triton",
+      "location": "Devant le bureau",
+      "type": "Placement",
+      "picarats": 10
+    },
+    {
+      "number": "002",
+      "name": "Où habite Schrader ?",
+      "givenBy": "Professeur Layton",
+      "solvedBy": "Professeur Layton",
+      "location": "Chez Schrader",
+      "type": "Entourer",
+      "picarats": 15
+    },
+    {
+      "number": "003",
+      "name": "Le mystère de la clef",
+      "solvedBy": "Luke Triton",
+      "location": "Palier",
+      "type": "Arrangement",
+      "picarats": 20
+    },
+    {
+      "number": "004",
+      "name": "Chambre forte",
+      "solvedBy": "Luke Triton",
+      "location": "Appartement",
+      "type": "Entourer",
+      "picarats": 30
+    },
+    {
+      "number": "005",
+      "name": "Rangement efficace",
+      "givenBy": "Professeur Layton",
+      "solvedBy": "Luke Triton",
+      "location": "Compartiment 3A",
+      "type": "Placement",
+      "picarats": 30
+    },
+    {
+      "number": "006",
+      "name": "Pile de crêpe 1",
+      "givenBy": "Sally",
+      "solvedBy": "Luke Triton",
+      "location": "Wagon n°6",
+      "type": "Crêpes",
+      "picarats": 15
+    },
+    {
+      "number": "007",
+      "name": "Quatre couples",
+      "givenBy": "Chester",
+      "solvedBy": "Professeur Layton",
+      "location": "Wagon-restaurant",
+      "type": "Entourer",
+      "picarats": 20
+    },
+    {
+      "number": "008",
+      "name": "Le festin de Luke",
+      "givenBy": "Chester",
+      "solvedBy": "Professeur Layton",
+      "location": "Wagon-restaurant",
+      "type": "Toucher",
+      "picarats": 25
+    },
+    {
+      "number": "009",
+      "name": "Pyramide de cristal",
+      "solvedBy": "Luke Triton",
+      "location": "Wagon-restaurant",
+      "type": "QCM",
+      "picarats": 10
+    },
+    {
+      "number": "010",
+      "name": "Chef d'œuvre",
+      "solvedBy": "Luke Triton",
+      "location": "Wagon-restaurant",
+      "type": "Écrire la réponse",
+      "picarats": 15
+    },
+    {
+      "number": "011",
+      "name": "Mixité forestière",
+      "solvedBy": "Luke Triton",
+      "location": "Arrière du train",
+      "type": "Tracé de traits",
+      "picarats": 20
+    },
+    {
+      "number": "012",
+      "name": "Temps couvert",
+      "givenBy": "Guy",
+      "solvedBy": "Professeur Layton",
+      "location": "Wagon n°7",
+      "type": "Écrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "013",
+      "name": "Dans votre assiette",
+      "givenBy": "Macaron",
+      "solvedBy": "Luke Triton",
+      "location": "Cuisine",
+      "type": "Écrire la réponse",
+      "picarats": 15
+    },
+    {
+      "number": "014",
+      "name": "Haut les casquettes",
+      "solvedBy": "Professeur Layton",
+      "location": "Cuisine",
+      "type": "Écrire la réponse",
+      "picarats": 25
+    },
+    {
+      "number": "015",
+      "name": "Mais qui est Tom?",
+      "solvedBy": "Luke Triton",
+      "location": "Wagon n°3",
+      "type": "Déplacements",
+      "picarats": 30
+    },
+    {
+      "number": "016",
+      "name": "Fleurs en folie",
+      "solvedBy": "Luke Triton",
+      "location": "Compartiment 6B",
+      "type": "QCM",
+      "picarats": 15
+    },
+    {
+      "number": "017",
+      "name": "Un travail de fourmi",
+      "solvedBy": "Luke Triton",
+      "location": "Compartiment 3A",
+      "type": "Tracé de traits",
+      "picarats": 25
+    },
+    {
+      "number": "018",
+      "name": "À petit pas",
+      "givenBy": "Clarisse",
+      "solvedBy": "Professeur Layton",
+      "location": "Wagon n°3",
+      "type": "Cases à toucher",
+      "picarats": 20
+    },
+    {
+      "number": "019",
+      "name": "Voyage en train",
+      "solvedBy": "Luke Triton",
+      "location": "Wagon n°3",
+      "type": "Écrire la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "020",
+      "name": "Indélicatesse",
+      "givenBy": "Inspecteur Chelmey",
+      "solvedBy": "Professeur Layton",
+      "location": "Wagon n°4",
+      "type": "Écrire la réponse",
+      "picarats": 25
+    },
+    {
+      "number": "021",
+      "name": "Bouche à oreille",
+      "givenBy": "Capone",
+      "solvedBy": "Professeur Layton",
+      "location": "Réserve d'énigmes",
+      "type": "Écrire la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "022",
+      "name": "Sus aux détritus ! 1",
+      "solvedBy": "Professeur Layton",
+      "location": "Arrière du train",
+      "type": "Déplacements",
+      "picarats": 45
+    },
+    {
+      "number": "023",
+      "name": "Une défaite amère",
+      "solvedBy": "Luke Triton",
+      "location": "Compartiment 4B",
+      "type": "QCM",
+      "picarats": 15
+    },
+    {
+      "number": "024",
+      "name": "Le petit papier",
+      "givenBy": "Lili",
+      "solvedBy": "Professeur Layton",
+      "location": "Réserve d'énigmes",
+      "type": "Écrire la réponse",
+      "picarats": 10
+    },
+    {
+      "number": "025",
+      "name": "Échappée sauvage",
+      "givenBy": "Hank",
+      "solvedBy": "Professeur Layton",
+      "location": "Arrière du train",
+      "type": "Toucher",
+      "picarats": 20
+    },
+    {
+      "number": "026",
+      "name": "Changement de voie",
+      "givenBy": "Hank",
+      "solvedBy": "Professeur Layton",
+      "location": "Train en panne",
+      "type": "Déplacements",
+      "picarats": 25
+    },
+    {
+      "number": "027",
+      "name": "Adieux déchirants",
+      "solvedBy": "Luke Triton",
+      "location": "Quai de la gare",
+      "type": "Entourer",
+      "picarats": 20
+    },
+    {
+      "number": "028",
+      "name": "Bizarrouïde",
+      "solvedBy": "Luke Triton",
+      "location": "Route de la mairie",
+      "type": "QCM",
+      "picarats": 20
+    },
+    {
+      "number": "029",
+      "name": "Flèche de la victoire",
+      "solvedBy": "Luke Triton",
+      "location": "Route de la mairie",
+      "type": "QCM",
+      "picarats": 20
+    },
+    {
+      "number": "030",
+      "name": "Réflexion intense",
+      "solvedBy": "Professeur Layton",
+      "location": "Place de la mairie",
+      "type": "Écrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "031",
+      "name": "Pour ta pomme",
+      "givenBy": "Dorothea",
+      "solvedBy": "Professeur Layton",
+      "location": "Épicerie du village",
+      "type": "Écrire la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "032",
+      "name": "Emballez, c'est pesé!",
+      "givenBy": "Jasmine",
+      "solvedBy": "Professeur Layton",
+      "location": "Chemin boisé",
+      "type": "QCM",
+      "picarats": 20
+    },
+    {
+      "number": "033",
+      "name": "Le filet de pêche",
+      "givenBy": "Gabriel",
+      "solvedBy": "Luke Triton",
+      "location": "Lac de Dropstone",
+      "type": "Écrire la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "034",
+      "name": "D'un arbre à l'autre",
+      "solvedBy": "Luke Triton",
+      "location": "Chemin boisé",
+      "type": "Tracé de traits",
+      "picarats": 20
+    },
+    {
+      "number": "035",
+      "name": "Un quartier bigarré",
+      "givenBy": "Courriel",
+      "solvedBy": "Professeur Layton",
+      "location": "Champ de blé",
+      "type": "Attribution",
+      "picarats": 30
+    },
+    {
+      "number": "036",
+      "name": "Poussin en détresse",
+      "givenBy": "Jasmine",
+      "solvedBy": "Professeur Layton",
+      "location": "Chemin boisé",
+      "type": "QCM",
+      "picarats": 35
+    },
+    {
+      "number": "037",
+      "name": "Champion de golf",
+      "givenBy": "Kostya",
+      "solvedBy": "Professeur Layton",
+      "location": "Champ de blé",
+      "type": "Écrire la réponse",
+      "picarats": 25
+    },
+    {
+      "number": "038",
+      "name": "Transhumance",
+      "solvedBy": "Luke Triton",
+      "location": "Entrée de la ferme",
+      "type": "Écrire la réponse",
+      "picarats": 35
+    },
+    {
+      "number": "039",
+      "name": "Allez vous rhabiller",
+      "givenBy": "Lopez",
+      "solvedBy": "Professeur Layton",
+      "location": "Lieu du concours",
+      "type": "Attribution",
+      "picarats": 30
+    },
+    {
+      "number": "040",
+      "name": "Cube illustré",
+      "givenBy": "Madeline",
+      "solvedBy": "Professeur Layton",
+      "location": "Rue en fête",
+      "type": "Arrangement",
+      "picarats": 30
+    },
+    {
+      "number": "041",
+      "name": "Demi cubes",
+      "givenBy": "Justin",
+      "solvedBy": "Professeur Layton",
+      "location": "Rue en fête",
+      "type": "Entourer",
+      "picarats": 25
+    },
+    {
+      "number": "042",
+      "name": "Planche à découper 1",
+      "givenBy": "Balsa",
+      "solvedBy": "Professeur Layton",
+      "location": "Chemin de la ferme",
+      "type": "Tracé de traits",
+      "picarats": 25
+    },
+    {
+      "number": "043",
+      "name": "Planche à découper 2",
+      "givenBy": "Balsa",
+      "solvedBy": "Professeur Layton",
+      "location": "Chemin de la ferme",
+      "type": "Tracé de traits",
+      "picarats": 30
+    },
+    {
+      "number": "044",
+      "name": "Entremêlés",
+      "givenBy": "Remy",
+      "solvedBy": "Professeur Layton",
+      "location": "Entrée de la ferme",
+      "type": "Écrire la réponse",
+      "picarats": 25
+    },
+    {
+      "number": "045",
+      "name": "Retrait des bagages",
+      "givenBy": "Bruce",
+      "solvedBy": "Professeur Layton",
+      "location": "Entrée de la ferme",
+      "type": "Déplacements",
+      "picarats": 30
+    },
+    {
+      "number": "046",
+      "name": "Cherchez l'intrus",
+      "givenBy": "Lulu",
+      "solvedBy": "Professeur Layton",
+      "location": "Route de la mairie",
+      "type": "Entourer",
+      "picarats": 20
+    },
+    {
+      "number": "047",
+      "name": "Élection municipale",
+      "solvedBy": "Luke Triton",
+      "location": "Place de la mairie",
+      "type": "Écrire la réponse",
+      "picarats": 25
+    },
+    {
+      "number": "048",
+      "name": "Monsieur Anderson ?",
+      "solvedBy": "Professeur Layton",
+      "location": "Lieu du concours",
+      "type": "Entourer",
+      "picarats": 25
+    },
+    {
+      "number": "049",
+      "name": "Caprice royal",
+      "givenBy": "Madeline",
+      "solvedBy": "Professeur Layton",
+      "location": "Rue en fête",
+      "type": "Entourer",
+      "picarats": 20
+    },
+    {
+      "number": "050",
+      "name": "Vacheries",
+      "givenBy": "Oscar",
+      "solvedBy": "Luke Triton",
+      "location": "Lieu du concours",
+      "type": "Toucher",
+      "picarats": 30
+    },
+    {
+      "number": "051",
+      "name": "Chat ou pacha",
+      "solvedBy": "Professeur Layton",
+      "location": "Épicerie du village",
+      "type": "QCM",
+      "picarats": 20
+    },
+    {
+      "number": "052",
+      "name": "Un temps à chapeau",
+      "givenBy": "Lopez",
+      "solvedBy": "Professeur Layton",
+      "location": "Réserve d'énigmes",
+      "type": "Placement",
+      "picarats": 30
+    },
+    {
+      "number": "053",
+      "name": "Entre hommes",
+      "givenBy": "Albert",
+      "solvedBy": "Professeur Layton",
+      "location": "Place de la mairie",
+      "type": "Entourer",
+      "picarats": 30
+    },
+    {
+      "number": "054",
+      "name": "Drapeau multicolore",
+      "givenBy": "Kostya",
+      "solvedBy": "Luke Triton",
+      "location": "Champ de blé",
+      "type": "Écrire la réponse",
+      "picarats": 25
+    },
+    {
+      "number": "055",
+      "name": "Le collier de Sam",
+      "givenBy": "",
+      "solvedBy": "Professeur Layton",
+      "location": "Quai de la gare",
+      "type": "Écrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "056",
+      "name": "Percer le code",
+      "solvedBy": "Professeur Layton",
+      "location": "Wagon n°3",
+      "type": "Placement",
+      "picarats": 40
+    },
+    {
+      "number": "057",
+      "name": "Effluves fleuris 1",
+      "solvedBy": "Professeur Layton",
+      "location": "Première classe",
+      "type": "Roses",
+      "picarats": 30
+    },
+    {
+      "number": "058",
+      "name": "Dans le tunnel",
+      "solvedBy": "Luke Triton",
+      "location": "Première classe",
+      "type": "Déplacements",
+      "picarats": 35
+    },
+    {
+      "number": "059",
+      "name": "Destination mystère",
+      "solvedBy": "Professeur Layton",
+      "location": "Première classe",
+      "type": "Écrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "060",
+      "name": "En place !",
+      "givenBy": "Rory",
+      "solvedBy": "Professeur Layton",
+      "location": "Sortie de la gare",
+      "type": "Tracé de traits",
+      "picarats": 25
+    },
+    {
+      "number": "061",
+      "name": "Hôtel caché",
+      "solvedBy": "Luke Triton",
+      "location": "Devant l'hôtel",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "062",
+      "name": "Effluves fleuris 2",
+      "solvedBy": "Luke Triton",
+      "location": "Chambre d'hôtel",
+      "type": "Roses",
+      "picarats": 40
+    },
+    {
+      "number": "063",
+      "name": "Cartes numérotées",
+      "givenBy": "Richard",
+      "solvedBy": "Luke Triton",
+      "location": "Réserve d'énigmes",
+      "type": "Placement",
+      "picarats": 25
+    },
+    {
+      "number": "064",
+      "name": "Noirs et blancs",
+      "givenBy": "Richard",
+      "solvedBy": "Professeur Layton",
+      "location": "Chez l'antiquaire",
+      "type": "Écrire la réponse",
+      "picarats": 20
+    },
+    {
+      "number": "065",
+      "name": "Carte au trésor",
+      "givenBy": "Richard",
+      "solvedBy": "Professeur Layton",
+      "location": "Chez l'antiquaire",
+      "type": "Entourer",
+      "picarats": 25
+    },
+    {
+      "number": "066",
+      "name": "La bonne combinaison",
+      "solvedBy": "Professeur Layton",
+      "location": "Entrée de la mine",
+      "type": "Écrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "067",
+      "name": "L'emploi du temps",
+      "givenBy": "Sam Léclair",
+      "solvedBy": "Professeur Layton",
+      "location": "Devant l'hôtel",
+      "type": "Écrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "068",
+      "name": "Un chapeau ?",
+      "givenBy": "Felix",
+      "solvedBy": "Professeur Layton",
+      "location": "Quartier est",
+      "type": "Chercher la figure",
+      "picarats": 25
+    },
+    {
+      "number": "069",
+      "name": "Menu complet",
+      "givenBy": "Felix",
+      "solvedBy": "Luke Triton",
+      "location": "Quartier est",
+      "type": "Écrire la réponse",
+      "picarats": 25
+    },
+    {
+      "number": "070",
+      "name": "Le prix des joyaux",
+      "givenBy": "Ilyana",
+      "solvedBy": "Professeur Layton",
+      "location": "Cabaret",
+      "type": "Tracé de traits",
+      "picarats": 30
+    },
+    {
+      "number": "071",
+      "name": "Quel âge a-t-elle ?",
+      "givenBy": "Ilyana",
+      "solvedBy": "Luke Triton",
+      "location": "Cabaret",
+      "type": "Écrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "072",
+      "name": "Photo-logique",
+      "givenBy": "Joseph",
+      "solvedBy": "Luke Triton",
+      "location": "Studio photo",
+      "type": "Écrire la réponse",
+      "picarats": 35
+    },
+    {
+      "number": "073",
+      "name": "La ligue des lampions",
+      "givenBy": "Jimmy",
+      "solvedBy": "Professeur Layton",
+      "location": "Place de l'horloge",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "074",
+      "name": "POUAH !",
+      "givenBy": "Aïolo",
+      "solvedBy": "Luke Triton",
+      "location": "Épicerie",
+      "type": "Toucher",
+      "picarats": 30
+    },
+    {
+      "number": "075",
+      "name": "Bonbons pour cinq",
+      "givenBy": "Marina",
+      "solvedBy": "Luke Triton",
+      "location": "Rue ouest",
+      "type": "Tracé de traits",
+      "picarats": 25
+    },
+    {
+      "number": "076",
+      "name": "Le sommet de la tour",
+      "givenBy": "Geoff",
+      "solvedBy": "Luke Triton",
+      "location": "Tour - 1er étage",
+      "type": "Entourer",
+      "picarats": 20
+    },
+    {
+      "number": "077",
+      "name": "Décoration soignée",
+      "givenBy": "Pavel",
+      "solvedBy": "Professeur Layton",
+      "location": "Salle des machines",
+      "type": "Placement",
+      "picarats": 30
+    },
+    {
+      "number": "078",
+      "name": "Porte à porte",
+      "solvedBy": "Luke Triton",
+      "location": "Salle des mineurs",
+      "type": "Entourer",
+      "picarats": 25
+    },
+    {
+      "number": "079",
+      "name": "Dans l'engrenage",
+      "solvedBy": "Professeur Layton",
+      "location": "Salle des machines",
+      "type": "QCM",
+      "picarats": 20
+    },
+    {
+      "number": "080",
+      "name": "Interrupteur",
+      "solvedBy": "Luke Triton",
+      "location": "Ascenseur",
+      "type": "Déplacements",
+      "picarats": 40
+    },
+    {
+      "number": "081",
+      "name": "Le coffre",
+      "solvedBy": "Professeur Layton",
+      "location": "Chambre forte",
+      "type": "Attribution",
+      "picarats": 50
+    },
+    {
+      "number": "082",
+      "name": "Dépannage impromptu",
+      "solvedBy": "Professeur Layton",
+      "location": "Chambre forte",
+      "type": "Tracé de traits",
+      "picarats": 30
+    },
+    {
+      "number": "083",
+      "name": "Piles de crêpes 2",
+      "givenBy": "Gertrude",
+      "solvedBy": "Professeur Layton",
+      "location": "Devant l'allée",
+      "type": "Crêpes",
+      "picarats": 30
+    },
+    {
+      "number": "084",
+      "name": "Piles de crêpes 3",
+      "givenBy": "Gertrude",
+      "solvedBy": "Professeur Layton",
+      "location": "Devant l'allée",
+      "type": "Crêpes",
+      "picarats": 40
+    },
+    {
+      "number": "085",
+      "name": "Solide manquant",
+      "givenBy": "Olson",
+      "solvedBy": "Professeur Layton",
+      "location": "Rue ouest",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "086",
+      "name": "Figures étonnantes",
+      "solvedBy": "Luke Triton",
+      "location": "Résidence",
+      "type": "Tracé de traits",
+      "picarats": 35
+    },
+    {
+      "number": "087",
+      "name": "Couleurs placées",
+      "givenBy": "Ray",
+      "solvedBy": "Professeur Layton",
+      "location": "Le croisement",
+      "type": "Attribution",
+      "picarats": 40
+    },
+    {
+      "number": "088",
+      "name": "Rando-grenouille",
+      "solvedBy": "Professeur Layton",
+      "location": "Machinerie",
+      "type": "Écrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "089",
+      "name": "Flower Power",
+      "givenBy": "Denis",
+      "solvedBy": "Professeur Layton",
+      "location": "Place de l'horloge",
+      "type": "Écrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "090",
+      "name": "La claire fontaine",
+      "solvedBy": "Professeur Layton",
+      "location": "Fontaine",
+      "type": "Entourer",
+      "picarats": 20
+    },
+    {
+      "number": "091",
+      "name": "Richesses pour tous",
+      "givenBy": "Ambre",
+      "solvedBy": "Professeur Layton",
+      "location": "Devant l'hôtel",
+      "type": "Tracé de traits",
+      "picarats": 30
+    },
+    {
+      "number": "092",
+      "name": "L'or à la pelle",
+      "givenBy": "Krantz",
+      "solvedBy": "Professeur Layton",
+      "location": "Hall de l'hôtel",
+      "type": "Cases à toucher",
+      "picarats": 40
+    },
+    {
+      "number": "093",
+      "name": "Devinez mon âge",
+      "givenBy": "Jenny",
+      "solvedBy": "Professeur Layton",
+      "location": "Rue commerçante",
+      "type": "Écrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "094",
+      "name": "Fantasticubique",
+      "givenBy": "Grinko",
+      "solvedBy": "Professeur Layton",
+      "location": "Musée - RDC",
+      "type": "Écrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "095",
+      "name": "Rangez les livres",
+      "solvedBy": "Professeur Layton",
+      "location": "Musée - 1er étage",
+      "type": "Écrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "096",
+      "name": "Histoire de fantôme",
+      "givenBy": "Joseph",
+      "solvedBy": "Professeur Layton",
+      "location": "Studio photo",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "097",
+      "name": "Constellations",
+      "solvedBy": "Professeur Layton",
+      "location": "Forêt obscure 2",
+      "type": "Placement",
+      "picarats": 40
+    },
+    {
+      "number": "098",
+      "name": "Remue-mélanges 1",
+      "solvedBy": "Professeur Layton",
+      "location": "Réserve d'énigmes",
+      "type": "Deux par deux",
+      "picarats": 25
+    },
+    {
+      "number": "099",
+      "name": "Remue-mélanges 2",
+      "solvedBy": "Luke Triton",
+      "location": "Épicerie",
+      "type": "Deux par deux",
+      "picarats": 30
+    },
+    {
+      "number": "100",
+      "name": "Un pont délabré",
+      "solvedBy": "Professeur Layton",
+      "location": "Pont branlant",
+      "type": "Pont",
+      "picarats": 30
+    },
+    {
+      "number": "101",
+      "name": "Sauts de billes 1",
+      "givenBy": "Jimmy",
+      "solvedBy": "Professeur Layton",
+      "location": "Place de l'horloge",
+      "type": "Solitaire",
+      "picarats": 30
+    },
+    {
+      "number": "102",
+      "name": "Sauts de billes 2",
+      "givenBy": "Blitz",
+      "solvedBy": "Professeur Layton",
+      "location": "Chemin nord-est",
+      "type": "Solitaire",
+      "picarats": 35
+    },
+    {
+      "number": "103",
+      "name": "Sauts de billes 3",
+      "givenBy": "Rory",
+      "solvedBy": "Professeur Layton",
+      "location": "Sortie de la gare",
+      "type": "Solitaire",
+      "picarats": 40
+    },
+    {
+      "number": "104",
+      "name": "Sauts de billes 4",
+      "givenBy": "Olson",
+      "solvedBy": "Professeur Layton",
+      "location": "Rue ouest",
+      "type": "Solitaire",
+      "picarats": 45
+    },
+    {
+      "number": "105",
+      "name": "Sauts de billes 5",
+      "givenBy": "Ray",
+      "solvedBy": "Professeur Layton",
+      "location": "Le croisement",
+      "type": "Solitaire",
+      "picarats": 60
+    },
+    {
+      "number": "106",
+      "name": "Cavalier en balade 1",
+      "givenBy": "Gregorio",
+      "solvedBy": "Professeur Layton",
+      "location": "Musée Van Herzen",
+      "type": "Cavalier",
+      "picarats": 40
+    },
+    {
+      "number": "107",
+      "name": "Cavalier en balade 2",
+      "givenBy": "Gregorio",
+      "solvedBy": "Professeur Layton",
+      "location": "Musée Van Herzen",
+      "type": "Cavalier",
+      "picarats": 50
+    },
+    {
+      "number": "108",
+      "name": "Cavalier en balade 3",
+      "givenBy": "Gregorio",
+      "solvedBy": "Professeur Layton",
+      "location": "Musée Van Herzen",
+      "type": "Cavalier",
+      "picarats": 70
+    },
+    {
+      "number": "109",
+      "name": "Sortir le chien",
+      "givenBy": "Lila",
+      "solvedBy": "Professeur Layton",
+      "location": "Carrefour ouest",
+      "type": "Écrire la réponse",
+      "picarats": 50
+    },
+    {
+      "number": "110",
+      "name": "Le chemin parcouru",
+      "givenBy": "Inspecteur Chelmey",
+      "solvedBy": "Professeur Layton",
+      "location": "Hall de l'hôtel",
+      "type": "Tracé de traits",
+      "picarats": 35
+    },
+    {
+      "number": "111",
+      "name": "Au rapport chef !",
+      "givenBy": "Barton",
+      "solvedBy": "Professeur Layton",
+      "location": "Hall de l'hôtel",
+      "type": "Toucher",
+      "picarats": 50
+    },
+    {
+      "number": "112",
+      "name": "Un trait de lumière",
+      "givenBy": "Lucas",
+      "solvedBy": "Professeur Layton",
+      "location": "Grilles du musée",
+      "type": "Tracé de traits",
+      "picarats": 40
+    },
+    {
+      "number": "113",
+      "name": "Dés montés",
+      "givenBy": "Blitz",
+      "solvedBy": "Professeur Layton",
+      "location": "Chemin nord-est",
+      "type": "Écrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "114",
+      "name": "Récompense à la clé",
+      "solvedBy": "Professeur Layton",
+      "location": "Chambre d'hôtel",
+      "type": "Écrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "115",
+      "name": "Cartes sur table",
+      "givenBy": "Krantz",
+      "solvedBy": "Professeur Layton",
+      "location": "Hall de l'hôtel",
+      "type": "QCM",
+      "picarats": 40
+    },
+    {
+      "number": "116",
+      "name": "La photo déchirée",
+      "solvedBy": "Luke Triton",
+      "location": "Vieux portail",
+      "type": "Arrangement",
+      "picarats": 60
+    },
+    {
+      "number": "117",
+      "name": "Trio de duo",
+      "givenBy": "Narine",
+      "solvedBy": "Professeur Layton",
+      "location": "Carrefour ouest",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "118",
+      "name": "Sus aux détritus ! 2",
+      "solvedBy": "Professeur Layton",
+      "location": "Dépôt d'ordures",
+      "type": "Déplacements",
+      "picarats": 80
+    },
+    {
+      "number": "119",
+      "name": "Fausse monnaie",
+      "solvedBy": "Professeur Layton",
+      "location": "Tour - RDC",
+      "type": "Écrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "120",
+      "name": "Force hippique",
+      "givenBy": "Lila",
+      "solvedBy": "Luke Triton",
+      "location": "Carrefour ouest",
+      "type": "Toucher",
+      "picarats": 30
+    },
+    {
+      "number": "121",
+      "name": "En éclaireurs 1",
+      "solvedBy": "Professeur Layton",
+      "location": "Forêt obscure 1",
+      "type": "Lanternes",
+      "picarats": 20
+    },
+    {
+      "number": "122",
+      "name": "En éclaireurs 2",
+      "solvedBy": "Luke Triton",
+      "location": "Forêt obscure 1",
+      "type": "Lanternes",
+      "picarats": 30
+    },
+    {
+      "number": "123",
+      "name": "En éclaireurs 3",
+      "solvedBy": "Luke Triton",
+      "location": "Forêt obscure 2",
+      "type": "Lanternes",
+      "picarats": 40
+    },
+    {
+      "number": "124",
+      "name": "Attention, ovni !",
+      "solvedBy": "Luke Triton",
+      "location": "Ruelle sombre",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "125",
+      "name": "Champignons des bois",
+      "solvedBy": "Luke Triton",
+      "location": "Forêt obscure 2",
+      "type": "Tracé de traits",
+      "picarats": 50
+    },
+    {
+      "number": "126",
+      "name": "Terrain glissant 1",
+      "solvedBy": "Professeur Layton",
+      "location": "Forêt obscure 3",
+      "type": "Patinage",
+      "picarats": 20
+    },
+    {
+      "number": "127",
+      "name": "Terrain glissant 2",
+      "solvedBy": "Luke Triton",
+      "location": "Forêt obscure 3",
+      "type": "Patinage",
+      "picarats": 30
+    },
+    {
+      "number": "128",
+      "name": "Terrain glissant 3",
+      "solvedBy": "Professeur Layton",
+      "location": "Forêt obscure 3",
+      "type": "Patinage",
+      "picarats": 40
+    },
+    {
+      "number": "129",
+      "name": "Taupe départ",
+      "solvedBy": "Professeur Layton",
+      "location": "Cour de Mamie M.",
+      "type": "Entourer",
+      "picarats": 40
+    },
+    {
+      "number": "130",
+      "name": "Un bal peu banal",
+      "solvedBy": "Luke Triton",
+      "location": "Chambre d'ami",
+      "type": "Entourer",
+      "picarats": 30
+    },
+    {
+      "number": "131",
+      "name": "Pris au piège",
+      "solvedBy": "Professeur Layton",
+      "location": "Débarras",
+      "type": "Toucher",
+      "picarats": 40
+    },
+    {
+      "number": "132",
+      "name": "Partage de biens",
+      "solvedBy": "Professeur Layton",
+      "location": "Grand hall",
+      "type": "QCM",
+      "picarats": 40
+    },
+    {
+      "number": "133",
+      "name": "L'évasion",
+      "solvedBy": "Professeur Layton",
+      "location": "Débarras",
+      "type": "Déplacements",
+      "picarats": 60
+    },
+    {
+      "number": "134",
+      "name": "Chaudière à vapeur",
+      "solvedBy": "Luke Triton",
+      "location": "Machinerie",
+      "type": "Toucher",
+      "picarats": 40
+    },
+    {
+      "number": "135",
+      "name": "Serrure magique",
+      "solvedBy": "Professeur Layton",
+      "location": "Salle secrete",
+      "type": "Placement",
+      "picarats": 50
+    },
+    {
+      "number": "136",
+      "name": "La porte cachée",
+      "givenBy": "Nigel",
+      "solvedBy": "Professeur Layton",
+      "location": "Salle à manger",
+      "type": "Cases à toucher",
+      "picarats": 40
+    },
+    {
+      "number": "137",
+      "name": "L'épée du guerrier",
+      "solvedBy": "Professeur Layton",
+      "location": "Grand hall",
+      "type": "Entourer",
+      "picarats": 50
+    },
+    {
+      "number": "138",
+      "name": "L'ultime énigme",
+      "solvedBy": "Luke Triton",
+      "location": "Ruines du château",
+      "type": "Arrangement",
+      "picarats": 60
+    },
+    {
+      "number": "139",
+      "name": "Côte est, côte ouest",
+      "solvedBy": "Luke Triton",
+      "location": "Bureau de Layton",
+      "type": "Écrire la réponse",
+      "picarats": 70
+    },
+    {
+      "number": "140",
+      "name": "Pour un cube de plus",
+      "solvedBy": "Luke Triton",
+      "location": "Bureau de Layton",
+      "type": "QCM",
+      "picarats": 70
+    },
+    {
+      "number": "141",
+      "name": "Sauts de billes 6",
+      "solvedBy": "Luke Triton",
+      "location": "Bureau de Layton",
+      "type": "Solitaire",
+      "picarats": 99
+    },
+    {
+      "number": "142",
+      "name": "Une vie",
+      "solvedBy": "Luke Triton",
+      "location": "Bureau de Layton",
+      "type": "Écrire la réponse",
+      "picarats": 60
+    },
+    {
+      "number": "143",
+      "name": "Chiffres et lettres",
+      "solvedBy": "Luke Triton",
+      "location": "Bureau de Layton",
+      "type": "Placement",
+      "picarats": 60
+    },
+    {
+      "number": "144",
+      "name": "Pile de crêpes 4",
+      "solvedBy": "Luke Triton",
+      "location": "Bureau de Layton",
+      "type": "Crêpes",
+      "picarats": 99
+    },
+    {
+      "number": "145",
+      "name": "500 Perles",
+      "solvedBy": "Luke Triton",
+      "location": "Bureau de Layton",
+      "type": "Écrire la réponse",
+      "picarats": 70
+    },
+    {
+      "number": "146",
+      "name": "Boîte à angle",
+      "solvedBy": "Luke Triton",
+      "location": "Bureau de Layton",
+      "type": "Écrire la réponse",
+      "picarats": 70
+    },
+    {
+      "number": "147",
+      "name": "Labyrinthe secret",
+      "solvedBy": "Luke Triton",
+      "location": "Bureau de Layton",
+      "type": "Déplacements",
+      "picarats": 80
+    },
+    {
+      "number": "148",
+      "name": "Huit cartes",
+      "solvedBy": "Luke Triton",
+      "location": "Bureau de Layton",
+      "type": "Placement",
+      "picarats": 70
+    },
+    {
+      "number": "149",
+      "name": "À la suite",
+      "solvedBy": "Luke Triton",
+      "location": "Bureau de Layton",
+      "type": "Écrire la réponse",
+      "picarats": 70
+    },
+    {
+      "number": "150",
+      "name": "Cavalier en balade 4",
+      "solvedBy": "Luke Triton",
+      "location": "Bureau de Layton",
+      "type": "Cavalier",
+      "picarats": 99
+    },
+    {
+      "number": "151",
+      "name": "La note de Colin",
+      "solvedBy": "Luke Triton",
+      "location": "Bureau de Layton",
+      "type": "Écrire la réponse",
+      "picarats": 99
+    },
+    {
+      "number": "152",
+      "name": "Partie de cartes",
+      "solvedBy": "Luke Triton",
+      "location": "Bureau de Layton",
+      "type": "Écrire la réponse",
+      "picarats": 80
+    },
+    {
+      "number": "153",
+      "name": "Piège final",
+      "solvedBy": "Luke Triton",
+      "location": "Bureau de Layton",
+      "type": "Déplacements",
+      "picarats": 99
+    }
+  ],
+  "minigames": [
+    {
+      "id": "hamster",
+      "name": "Hamster"
+    },
+    {
+      "id": "photo",
+      "number": "1",
+      "name": "Appareil photo"
+    },
+    {
+      "id": "photo",
+      "number": "2",
+      "name": "Appareil photo"
+    },
+    {
+      "id": "photo",
+      "number": "3",
+      "name": "Appareil photo"
+    },
+    {
+      "id": "photo",
+      "number": "4",
+      "name": "Appareil photo"
+    },
+    {
+      "id": "photo",
+      "number": "5",
+      "name": "Appareil photo"
+    },
+    {
+      "id": "photo",
+      "number": "6",
+      "name": "Appareil photo"
+    },
+    {
+      "id": "photo",
+      "number": "7",
+      "name": "Appareil photo"
+    },
+    {
+      "id": "photo",
+      "number": "8",
+      "name": "Appareil photo"
+    },
+    {
+      "id": "photo",
+      "number": "9",
+      "name": "Appareil photo"
+    }
+  ]
+}

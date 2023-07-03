@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.less">
+    <link rel="preload" href="/assets/pl-title.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="/assets/pl-text.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/assets/pl-picarats.ttf" as="font" type="font/ttf" crossorigin>
+    <title>Énigmes - Professeur Layton</title>
+  </head>
+  <body>
+    <div id="loading">
+      <svg><use href="/assets/icons-sprite.svg#gear"></use></svg>
+    </div>
+    <main>
+      <nintendo-ds id="nds">
+        <div class="settings-fold" slot="settings">
+          <button id="settings-fold" title="Afficher le jeu">
+            <svg class="icon"><use href="/assets/icons-sprite.svg#show"></use></svg>
+          </button>
+        </div>
+      </nintendo-ds>
+      <div id="games" class="state">
+        <pl-tabs id="game-tabs" class="game-container" data-no-action>
+          <nav class="game-nav" slot="nav">
+            <% games.forEach(game => { %>
+              <div class="game-nav-item cartridge" for="<%= game.id %>">
+                <img class="game-nav-img" src="/assets/<%= game.id %>/titre.png">
+                <div class="game-nav-title"><%= game.id %></div>
+                <div class="dots"><i class="dot tl"></i><i class="dot tr"></i></div>
+              </div>
+            <% }) %>
+          </nav>
+          <div class="game-content" slot="content">
+            <% games.forEach(game => { %>
+              <div id="<%= game.id %>" class="game">
+                <img class="game-img" src="/assets/<%= game.id %>/titre.png">
+                <pl-collapse class="show">
+                  <button class="collapse-button" slot="button">Énigmes</button>
+                  <div class="collapse-content">
+                    <div class="game-puzzles-filter">
+                      <input class="puzzle-filter-name input" type="text" title="Rechercher" placeholder="Rechercher...">
+                      <% Object.keys(translations).forEach(label=> { %>
+                        <pl-select data-type="<%= label %>">
+                          <button class="button" slot="button" title="<%= translations[label] %>">
+                            <svg class="icon"><use href="/assets/icons-sprite.svg#puzzle-<%= label %>"></use></svg>
+                            <span><%= translations[label] %></span>
+                          </button>
+                          <% Array.from(new Set(game.puzzles.filter(p => p[label]).map(p => p[label]))).forEach(item => { %>
+                            <span><%= item %></span>
+                          <% }) %>
+                        </pl-select>
+                      <% }) %>
+                      <button class="puzzle-filter-reset button hidden">Réinitialiser</button>
+                      <small class="filter-results"><%= game.puzzles.length %> résultats</small>
+                    </div>
+                    <div class="game-puzzles">
+                      <% game.puzzles.forEach((puzzle, i) => { %>
+                        <div id="<%= game.id %>-<%= puzzle.number %>" class="cartridge puzzle">
+                          <h2 class="puzzle-name"><%= puzzle.number %> - <%= puzzle.name %></h2>
+                          <div class="puzzle-content">
+                            <div class="puzzle-image"
+                              style="
+                                background-image: url('/assets/<%= game.id %>/puzzles.jpg');
+                                --pos-x: <%= -256 * (i % 10) %>px;
+                                --pos-y: <%= -192 * Math.floor(i / 10) %>px;
+                                "
+                              ></div>
+                            <span class="puzzle-picarats badge" title="<%= puzzle.picarats %> picarats"><%= puzzle.picarats %></span>
+                            <button class="puzzle-play">
+                              <svg><use href="/assets/icons-sprite.svg#solve"></use></svg>
+                            </button>
+                          </div>
+                          <div class="puzzle-infos">
+                            <% Object.keys(translations).forEach(label => { %>
+                              <% if (puzzle[label]) { %>
+                                <div class="puzzle-info puzzle-info-<%= label %>">
+                                  <span class="puzzle-info-label badge" title="<%= translations[label] %>">
+                                    <svg class="icon"><use href="/assets/icons-sprite.svg#puzzle-<%= label %>"></use></svg>
+                                  </span>
+                                  <span class="puzzle-info-value"><%= puzzle[label] %></span>
+                                </div>
+                              <% } %>
+                            <% }) %>
+                          </div>
+                          <div class="dots"><i class="dot tl"></i><i class="dot tr"></i><i class="dot bl"></i><i class="dot br"></i>
+                          </div>
+                        </div>
+                      <% }) %>
+                    </div>
+                  </div>
+                </pl-collapse>
+                <pl-collapse class="show">
+                  <button class="collapse-button" slot="button">Mini-jeux</button>
+                  <div class="collapse-content game-puzzles">
+                    <% game.minigames.forEach((minigame, i) => { %>
+                        <div id="<%= game.id %>-<%= minigame.id %><%= minigame.number != null ? `-${minigame.number}`: '' %>" class="cartridge minigame">
+                          <h2 class="puzzle-name"><%= minigame.name %><%= minigame.number != null ? ` - ${minigame.number}` : '' %></h2>
+                          <div class="puzzle-content">
+                            <div class="puzzle-image"
+                              style="
+                                background-image: url('/assets/<%= game.id %>/minigames.jpg');
+                                --pos-x: <%= -256 * (i % 10) %>px;
+                                --pos-y: <%= -192 * Math.floor(i / 10) %>px;
+                                "
+                              ></div>
+                            <button class="puzzle-play">
+                              <svg><use href="/assets/icons-sprite.svg#solve"></use></svg>
+                            </button>
+                          </div>
+                          <div class="puzzle-infos">
+                            <% Object.keys(minigame.infos ?? {}).forEach(label => { %>
+                              <div class="puzzle-info puzzle-info-<%= label %>">
+                                <span class="puzzle-info-label badge" title="<%= translations[label] %>">
+                                  <svg class="icon"><use href="/assets/icons-sprite.svg#minigame-<%= label %>"></use></svg>
+                                </span>
+                                <span class="puzzle-info-value"><%= minigame[label] %></span>
+                              </div>
+                            <% }) %>
+                          </div>
+                          <div class="dots"><i class="dot tl"></i><i class="dot tr"></i><i class="dot bl"></i><i class="dot br"></i>
+                          </div>
+                        </div>
+                      <% }) %>
+                  </div>
+                </pl-collapse>
+              </div>
+            <% }) %>
+          </div>
+        </pl-tabs>
+      </div>
+    </main>
+    <footer>
+      <span>Made with ♥ by</span><a class="link" href="https://github.com/Dastan21" target="_blank">Dastan</a></footer>
+    <script type="module" src="/src/app.ts"></script>
+    <script type="module" src="/cores/nds.js"></script>
+  </body>
+</html>
