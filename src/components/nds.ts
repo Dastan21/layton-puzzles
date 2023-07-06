@@ -165,6 +165,7 @@ export enum NDSState {
   Off,
   Starting,
   Started,
+  Loaded,
 }
 
 export enum NDSScreen {
@@ -401,13 +402,15 @@ export default class NDS extends HTMLElement {
     this.ctx2d[0] = this.screenCanvas[0].canvas.getContext('2d', { alpha: false })
     this.ctx2d[1] = this.screenCanvas[1].canvas.getContext('2d', { alpha: false })
 
+    this._state = NDSState.Started
+
     const gameSpeed = import.meta.env.DEV ? NDS.NDS_SPEED_FAST : NDS.NDS_SPEED_NORMAL
     this._interval = setInterval(() => {
       this.runFrame()
     }, gameSpeed)
 
     setTimeout(() => {
-      this._state = NDSState.Started
+      this._state = NDSState.Loaded
       this.dispatchEvent(new Event('started'))
     }, NDS.delayByGame(game))
   }
@@ -576,6 +579,8 @@ export default class NDS extends HTMLElement {
 
   public pause (): void {
     if (import.meta.env.DEV) return
+    if (this._state !== NDSState.Started && this._state !== NDSState.Loaded) return
+
     this._pause = true
     this.$overlay?.classList.remove('hidden')
     this.$overlay?.classList.add('pause')
@@ -583,6 +588,7 @@ export default class NDS extends HTMLElement {
 
   public resume (): void {
     if (this._savestate == null) return
+
     this._pause = false
     this.$overlay?.classList.add('hidden')
     this.$overlay?.classList.remove('pause')
