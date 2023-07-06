@@ -131,11 +131,11 @@ function initFilters (): void {
         })
         const show = filterByName && filterBySelects
         if (show) count += 1
-        $p.classList.toggle('none', !show)
+        $p.classList.toggle('hidden', !show)
       })
       const $resCount = $game.getElementsByClassName('filter-results').item(0) as HTMLElement
       $resCount.innerText = `${count} résultat${count > 1 ? 's' : ''}`
-      $filterReset.classList.toggle('hidden', filters.showReset)
+      $filterReset.disabled = filters.showReset
     }
 
     onInput($filterName, ($input) => {
@@ -167,13 +167,13 @@ function load (): void {
   const $loading = document.getElementById('loading') as HTMLElement
   setTimeout(() => {
     $loading.classList.add('invisible')
-    setTimeout(() => { $loading.classList.add('none') }, 200)
+    setTimeout(() => { $loading.classList.add('hidden') }, 200)
   }, 0)
 }
 
 function unload (): void {
   const $loading = document.getElementById('loading') as HTMLElement
-  $loading.classList.remove('none')
+  $loading.classList.remove('hidden')
   setTimeout(() => {
     $loading.classList.remove('invisible')
   }, 0)

@@ -1,3 +1,4 @@
+import { type GameType } from '../game.js'
 import { download, fetchFile } from '../utils/api.js'
 import { onClick, onInput, onPress } from '../utils/dom.js'
 
@@ -150,7 +151,7 @@ const style = `
     animation: rotate 6s linear infinite;
   }
 
-  .none, .fold {
+  .hidden, .fold {
     display: none;
   }
 `
@@ -172,9 +173,14 @@ export enum NDSScreen {
 }
 
 export default class NDS extends HTMLElement {
-  private static readonly START_DELAY = 1500
   private static readonly NDS_SPEED_NORMAL = 33
   private static readonly NDS_SPEED_FAST = 1
+  private static readonly START_DELAYS = {
+    PL1: 2000,
+    PL2: 2000,
+    PL3: 5000,
+    PL4: 5000
+  }
 
   public static readonly NAME = 'nintendo-ds'
 
@@ -347,7 +353,7 @@ export default class NDS extends HTMLElement {
   }
 
   private async loadRom (romName: string): Promise<void> {
-    this.$overlay?.classList.remove('none')
+    this.$overlay?.classList.remove('hidden')
 
     const buffer = await fetchFile(`/roms/${romName}.nds`)
     if (buffer == null) return
@@ -378,13 +384,13 @@ export default class NDS extends HTMLElement {
     } catch (err) {
       throw new Error(`Could not load ROM: ${String((err as Error).message)}`)
     } finally {
-      this.$overlay?.classList.add('none')
+      this.$overlay?.classList.add('hidden')
       const $overlayContent = this.$overlay?.getElementsByClassName('content').item(0)
       if ($overlayContent != null) $overlayContent.textContent = 'Pause'
     }
   }
 
-  public async start (game: string): Promise<void> {
+  public async start (game: GameType): Promise<void> {
     if (this._interval != null) return
     this._state = NDSState.Starting
 
@@ -403,7 +409,7 @@ export default class NDS extends HTMLElement {
     setTimeout(() => {
       this._state = NDSState.Started
       this.dispatchEvent(new Event('started'))
-    }, NDS.START_DELAY)
+    }, NDS.delayByGame(game))
   }
 
   public stop (): void {
@@ -571,14 +577,14 @@ export default class NDS extends HTMLElement {
   public pause (): void {
     if (import.meta.env.DEV) return
     this._pause = true
-    this.$overlay?.classList.remove('none')
+    this.$overlay?.classList.remove('hidden')
     this.$overlay?.classList.add('pause')
   }
 
   public resume (): void {
     if (this._savestate == null) return
     this._pause = false
-    this.$overlay?.classList.add('none')
+    this.$overlay?.classList.add('hidden')
     this.$overlay?.classList.remove('pause')
   }
 
@@ -602,6 +608,10 @@ export default class NDS extends HTMLElement {
     this.screenCanvas[0].canvas?.classList.remove('fold')
     this.screenCanvas[1].canvas?.classList.remove('fold')
     this.$overlay?.classList.remove('fold')
+  }
+
+  public static delayByGame (game: GameType): number {
+    return NDS.START_DELAYS[game]
   }
 
   public updateSettings (settings: Partial<NDSSettings>): void {

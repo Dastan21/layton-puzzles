@@ -86,7 +86,8 @@ export default class Select extends HTMLElement {
       const key = normalize($option.textContent ?? '').replace(/ /g, '-')
       this.$options.set(key, $option)
       $option.setAttribute('key', key)
-      $option.addEventListener('mouseup', () => {
+      $option.addEventListener('mouseup', (e) => {
+        if (e.button !== 0) return
         this.toggleSelect($option.getAttribute('key') ?? '')
       })
     })

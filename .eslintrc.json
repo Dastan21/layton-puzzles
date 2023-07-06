@@ -10,5 +10,5 @@
       "fixStyle": "inline-type-imports"
     }]
   },
-  "ignorePatterns": ["dist", "public"]
+  "ignorePatterns": ["dist", "public", "scripts", "vite.config.js"]
 }

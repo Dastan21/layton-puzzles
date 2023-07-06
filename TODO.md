@@ -1,5 +1,2 @@
-- ajouter les mini-jeux
 - remplir les données des puzzles/mini-jeux
-  - PL2 différences
-  - PL3 (+ voiture + perroquet + livre)
   - PL4

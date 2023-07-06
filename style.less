@@ -25,6 +25,7 @@
   --orange-shadow-2: #af862877;
   --brown-background: #b86b23;
   --beige: #f9ebd3;
+  --blue: #69ade3;
   --white-shadow: #ffffff66;
   --light-gray: #dfdfdf;
 }
@@ -165,7 +166,6 @@ body:not(.small-screen) #nds {
           flex-wrap: wrap;
           justify-content: center;
           gap: 8px;
-          padding-bottom: 32px;
 
           >.search {
             width: 38px;
@@ -179,9 +179,9 @@ body:not(.small-screen) #nds {
         }
 
         .filter-results {
-          position: absolute;
-          right: 0;
-          bottom: 0;
+          float: right;
+          width: fit-content;
+          margin: 0 0 0 auto;
         }
 
         .game-puzzles {
@@ -248,6 +248,10 @@ body:not(.small-screen) #nds {
   border-radius: 8px;
   border: 2px solid var(--brown);
   box-shadow: 0 4px var(--brown), inset 0 0 1px 1px var(--white-shadow);
+
+  &.minigame {
+    background-color: var(--blue);
+  }
 
   &.playing {
     transform: translateY(4px);
@@ -457,9 +461,14 @@ footer {
   padding: 6px;
   cursor: pointer;
 
-  &:active {
+  &:active, &:disabled {
     transform: translateY(3px);
     box-shadow: none;
+  }
+
+  &:disabled {
+    opacity: .7;
+    cursor: default;
   }
 }
 
@@ -495,12 +504,8 @@ pl-select {
   height: 20px;
 }
 
-.none {
-  display: none !important;
-}
-
 .hidden {
-  visibility: hidden !important;
+  display: none !important;
 }
 
 .invisible {
@@ -621,6 +626,9 @@ pl-collapse {
   }
 
   .collapse-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     margin-top: 16px;
   }
 }

@@ -53,9 +53,9 @@
                           <% }) %>
                         </pl-select>
                       <% }) %>
-                      <button class="puzzle-filter-reset button hidden">Réinitialiser</button>
-                      <small class="filter-results"><%= game.puzzles.length %> résultats</small>
+                      <button class="puzzle-filter-reset button" disabled>Réinitialiser</button>
                     </div>
+                    <small class="filter-results"><%= game.puzzles.length %> résultats</small>
                     <div class="game-puzzles">
                       <% game.puzzles.forEach((puzzle, i) => { %>
                         <div id="<%= game.id %>-<%= puzzle.number %>" class="cartridge puzzle">
@@ -94,8 +94,9 @@
                 </pl-collapse>
                 <pl-collapse class="show">
                   <button class="collapse-button" slot="button">Mini-jeux</button>
-                  <div class="collapse-content game-puzzles">
-                    <% game.minigames.forEach((minigame, i) => { %>
+                  <div class="collapse-content">
+                    <div class="game-puzzles">
+                      <% game.minigames.forEach((minigame, i) => { %>
                         <div id="<%= game.id %>-<%= minigame.id %><%= minigame.number != null ? `-${minigame.number}`: '' %>" class="cartridge minigame">
                           <h2 class="puzzle-name"><%= minigame.name %><%= minigame.number != null ? ` - ${minigame.number}` : '' %></h2>
                           <div class="puzzle-content">
@@ -124,6 +125,7 @@
                           </div>
                         </div>
                       <% }) %>
+                    </div>
                   </div>
                 </pl-collapse>
               </div>

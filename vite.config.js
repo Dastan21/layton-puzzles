@@ -7,7 +7,7 @@ import PL3 from './games/PL3.json'
 import PL4 from './games/PL4.json'
 
 const devList = { PL1, PL2, PL3, PL4 }
-const prodList = { PL1, PL2 }
+const prodList = { PL1, PL2, PL3 }
 
 const games = process.env.NODE_ENV === 'development' ? devList : prodList
 

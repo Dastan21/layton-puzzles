@@ -2,27 +2,94 @@ import type NDS from './components/nds.js'
 import { NDSScreen, NDSState } from './components/nds.js'
 import { throttle } from './utils/dom.js'
 
-type DotRGB = [number, number, number]
-type DotByGame = Record<string, DotRGB>
+type DotRGB = [number, number, number, number?, number?]
+interface GameDot {
+  puzzle: DotRGB
+  minigame: Record<string, DotRGB>
+}
+type DotByGame = Record<GameType, GameDot>
 
 const WIN_SCREENS: DotByGame = {
-  PL1: [222, 181, 140],
-  PL2: [222, 165, 74]
+  PL1: {
+    puzzle: [222, 181, 140],
+    minigame: {}
+  },
+  PL2: {
+    puzzle: [222, 165, 74],
+    minigame: {
+      photo: [107, 123, 0]
+    }
+  },
+  PL3: {
+    puzzle: [222, 165, 74],
+    minigame: {
+      minimobile: [255, 198, 140, 86, 55],
+      perroquet: [189, 90, 0, 86, 55]
+    }
+  },
+  PL4: {
+    puzzle: [0, 0, 0],
+    minigame: {}
+  }
 }
 const LOSE_SCREENS: DotByGame = {
-  PL1: [49, 74, 66],
-  PL2: [115, 156, 156]
+  PL1: {
+    puzzle: [49, 74, 66],
+    minigame: {}
+  },
+  PL2: {
+    puzzle: [115, 156, 156],
+    minigame: {}
+  },
+  PL3: {
+    puzzle: [115, 156, 156],
+    minigame: {}
+  },
+  PL4: {
+    puzzle: [0, 0, 0],
+    minigame: {}
+  }
 }
 const LEAVE_SCREENS: DotByGame = {
-  PL1: [16, 74, 82],
-  PL2: [57, 49, 24]
+  PL1: {
+    puzzle: [16, 74, 82],
+    minigame: {}
+  },
+  PL2: {
+    puzzle: [57, 49, 24],
+    minigame: {}
+  },
+  PL3: {
+    puzzle: [0, 148, 156],
+    minigame: {}
+  },
+  PL4: {
+    puzzle: [0, 0, 0],
+    minigame: {}
+  }
 }
 const MENU_SCREENS: DotByGame = {
-  PL1: [123, 90, 41],
-  PL2: [206, 189, 140]
+  PL1: {
+    puzzle: [123, 90, 41],
+    minigame: {}
+  },
+  PL2: {
+    puzzle: [206, 189, 140],
+    minigame: {}
+  },
+  PL3: {
+    puzzle: [173, 132, 33],
+    minigame: {}
+  },
+  PL4: {
+    puzzle: [0, 0, 0],
+    minigame: {}
+  }
 }
 
-const LEAVE_RECTS: Record<string, { puzzle: DOMRect, minigame: Record<string, DOMRect> }> = {
+type RectByGame = Record<GameType, { puzzle: DOMRect, minigame: Record<string, DOMRect> }>
+
+const LEAVE_RECTS: RectByGame = {
   PL1: {
     puzzle: new DOMRect(182, 22, 100, 22),
     minigame: {
@@ -36,6 +103,18 @@ const LEAVE_RECTS: Record<string, { puzzle: DOMRect, minigame: Record<string, DO
       hamster: new DOMRect(200, 155, 60, 45),
       photo: new DOMRect(205, 170, 65, 30)
     }
+  },
+  PL3: {
+    puzzle: new DOMRect(195, 30, 65, 30),
+    minigame: {
+      minimobile: new DOMRect(180, 160, 80, 40),
+      perroquet: new DOMRect(200, 165, 60, 35),
+      livre: new DOMRect(195, 165, 65, 35)
+    }
+  },
+  PL4: {
+    puzzle: new DOMRect(0, 0, 0, 0),
+    minigame: {}
   }
 }
 
@@ -54,6 +133,7 @@ export default class Game {
   private readonly _game: GameType
   private _type: PuzzleType
   private _state: string | null
+  private _res: PuzzleResult
   private readonly _resolve: (stateId: string) => Promise<void>
   private readonly $games: HTMLElement | null
 
@@ -64,12 +144,16 @@ export default class Game {
       await this.nds.loadState(stateId).then(() => {
         this.nds.resume()
         this.nds.unlock()
+        setTimeout(() => {
+          this._res = PuzzleResult.None
+        }, 500)
       })
     }, () => { this.toggleResolve(false) }, 2000)
 
     this._game = game
     this._type = 'puzzle'
     this._state = null
+    this._res = PuzzleResult.None
     this.nds.addEventListener('started', () => { this.toggleResolve(false) })
   }
 
@@ -98,14 +182,18 @@ export default class Game {
   }
 
   private getPuzzleResult (): PuzzleResult {
-    const dotToCheck = this.nds.getDot(NDSScreen.Bottom, 1, 1)
-    if (this.checkDot(dotToCheck, WIN_SCREENS[this._game])) return PuzzleResult.Win
-    if (this.checkDot(dotToCheck, LOSE_SCREENS[this._game])) return PuzzleResult.Lose
-    if (this.checkDot(dotToCheck, LEAVE_SCREENS[this._game]) || this.checkDot(dotToCheck, MENU_SCREENS[this._game])) return PuzzleResult.Leave
+    if (this.checkGameDot(WIN_SCREENS[this._game])) return PuzzleResult.Win
+    if (this.checkGameDot(LOSE_SCREENS[this._game])) return PuzzleResult.Lose
+    if (this.checkGameDot(LEAVE_SCREENS[this._game]) || this.checkGameDot(MENU_SCREENS[this._game])) return PuzzleResult.Leave
     return PuzzleResult.None
   }
 
-  private checkDot (dotA: Uint8ClampedArray, dotB: DotRGB): boolean {
+  private checkGameDot (game: GameDot): boolean {
+    return this.checkDot(game.puzzle) || Object.values(game.minigame).some(d => this.checkDot(d))
+  }
+
+  private checkDot (dotB: DotRGB): boolean {
+    const dotA = this.nds.getDot(NDSScreen.Bottom, Math.max(dotB[3] ?? 1), Math.max(dotB[4] ?? 1))
     return dotB[0] === dotA[0] && dotB[1] === dotA[1] && dotB[2] === dotA[2]
   }
 
@@ -119,22 +207,22 @@ export default class Game {
 
   private listenPuzzleResult (): void {
     setInterval(() => {
-      if (!this.nds.isPlaying) return
+      if (!this.nds.isPlaying || this._res !== PuzzleResult.None) return
       // check result
-      const res = this.getPuzzleResult()
+      this._res = this.getPuzzleResult()
       // check leave button
-      if (res === PuzzleResult.None) {
+      if (this._res === PuzzleResult.None) {
         if (this.isOnLeaveButton) this.nds.lock()
         else this.nds.unlock()
         return
       }
-      this.endPuzzleProcess(res)
+      this.endPuzzleProcess()
     }, 1)
   }
 
-  private endPuzzleProcess (res: PuzzleResult): void {
+  private endPuzzleProcess (): void {
     this.nds.lock()
-    if (res === PuzzleResult.Leave) {
+    if (this._res === PuzzleResult.Leave) {
       void this.nds.reloadState()
       this.nds.unlock()
     }

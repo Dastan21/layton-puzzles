@@ -21,7 +21,11 @@ if exists(game_path) is not True:
 
 
 puzzles_path = game_path + puzzles_folder + '/'
-files = [ puzzles_path + file for file in listdir(puzzles_path)]
+try:
+    files = [ puzzles_path + file for file in listdir(puzzles_path)]
+except:
+    print(f'Folder not found: {puzzles_path}')
+    exit(0)
 puzzles_num = len(files)
 bg_color = (71, 42, 17)
 
