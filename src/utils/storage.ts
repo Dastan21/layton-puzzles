@@ -15,9 +15,10 @@ function get (key: string): string | null {
 function store<T extends object> (data: T): T {
   return new Proxy<T>(data, {
     get (obj, prop) {
-      const value = String(get(String(prop)) ?? obj[prop as keyof T])
+      const value = get(String(prop)) ?? obj[prop as keyof T]
+      if (Array.isArray(value)) return value
       try {
-        return JSON.parse(value)
+        return JSON.parse(String(value))
       } catch (_) {
         return value
       }
