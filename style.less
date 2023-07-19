@@ -126,6 +126,7 @@ body:not(.small-screen) #nds {
 #games {
   margin: 80px 16px;
   width: 100%;
+  height: fit-content;
   padding: 8px;
   border-radius: 8px;
   border: 2px solid var(--orange);
@@ -256,6 +257,21 @@ body:not(.small-screen) #nds {
   &.playing {
     transform: translateY(4px);
     box-shadow: none;
+  }
+  
+  &:not(.solved) {
+    .pin {
+      display: none;
+    }
+  }
+
+  .pin {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 32px;
+    height: auto;
+    image-rendering: pixelated;
   }
 
   .dots {

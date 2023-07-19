@@ -20,12 +20,14 @@ declare global {
 
 interface WebSettings extends NDSSettings {
   game: GameType
+  solved: string[]
 }
 
 const settings: WebSettings = local.store({
   volume: 0.5,
   mute: false,
-  game: 'PL1'
+  game: 'PL1',
+  solved: []
 })
 
 function onReady (): void {
@@ -93,6 +95,17 @@ function initNds (): void {
   })
   addEventListener('resize', () => { toggleSmallScreen() })
   toggleSmallScreen()
+
+  nds.addEventListener('solved', ((e: CustomEvent) => {
+    const $puzzle = document.getElementById(e.detail)
+    if ($puzzle == null) return
+    $puzzle.classList.add('solved')
+    settings.solved = [...new Set([...settings.solved, e.detail])]
+  }) as EventListener)
+
+  settings.solved.forEach((s) => {
+    document.getElementById(s)?.classList.add('solved')
+  })
 }
 
 interface Filters {

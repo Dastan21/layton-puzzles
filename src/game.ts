@@ -161,7 +161,6 @@ export default class Game {
     if (this.nds.state !== NDSState.Off) return
 
     this.nds.start(this._game).then(() => {
-      if (import.meta.env.DEV) return
       this.listenPuzzleResult()
     }).catch((err) => { console.error(err) })
   }
@@ -173,7 +172,7 @@ export default class Game {
     if (type == null) throw new Error('Invalid puzzle type')
     this.toggleResolve(true)
     this._type = type
-    this._state = stateId.split('-')[1]
+    this._state = stateId.split('-').slice(1).join('-')
     await this._resolve(stateId)
   }
 
@@ -208,9 +207,7 @@ export default class Game {
   private listenPuzzleResult (): void {
     setInterval(() => {
       if (!this.nds.isPlaying || this._res !== PuzzleResult.None) return
-      // check result
       this._res = this.getPuzzleResult()
-      // check leave button
       if (this._res === PuzzleResult.None) {
         if (this.isOnLeaveButton) this.nds.lock()
         else this.nds.unlock()
@@ -225,6 +222,8 @@ export default class Game {
     if (this._res === PuzzleResult.Leave) {
       void this.nds.reloadState()
       this.nds.unlock()
+    } else if (this._res === PuzzleResult.Win) {
+      this.nds.dispatchEvent(new CustomEvent('solved', { detail: `${this._game}-${this._state ?? ''}` }))
     }
   }
 }
