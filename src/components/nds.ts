@@ -174,8 +174,7 @@ export enum NDSScreen {
 }
 
 export default class NDS extends HTMLElement {
-  private static readonly NDS_SPEED_NORMAL = 33
-  private static readonly NDS_SPEED_FAST = 1
+  private static readonly NDS_SPEED = 33
   private static readonly START_DELAYS = {
     PL1: 2000,
     PL2: 2000,
@@ -404,10 +403,18 @@ export default class NDS extends HTMLElement {
 
     this._state = NDSState.Started
 
-    const gameSpeed = import.meta.env.DEV ? NDS.NDS_SPEED_FAST : NDS.NDS_SPEED_NORMAL
-    this._interval = setInterval(() => {
-      this.runFrame()
-    }, gameSpeed)
+    if (import.meta.env.DEV) {
+      let fastLoop = (): void => {}
+      fastLoop = () => {
+        window.requestAnimationFrame(() => { fastLoop() })
+        this.runFrame()
+      }
+      fastLoop()
+    } else {
+      this._interval = setInterval(() => {
+        this.runFrame()
+      }, NDS.NDS_SPEED)
+    }
 
     setTimeout(() => {
       this._state = NDSState.Loaded

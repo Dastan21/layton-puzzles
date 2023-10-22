@@ -16,7 +16,7 @@
   src: local('LaytonPicarats'), url(/assets/pl-picarats.ttf) format('truetype');
 }
 
-:root {
+:root, [for="PL1"], [for="PL2"] {
   --orange: #ca9a2e;
   --brown: #472a11;
   --brown-2: #5a4212;
@@ -25,9 +25,30 @@
   --orange-shadow-2: #af862877;
   --brown-background: #b86b23;
   --beige: #f9ebd3;
-  --blue: #69ade3;
   --white-shadow: #ffffff66;
   --light-gray: #dfdfdf;
+}
+
+body[data-game="PL3"], [for="PL3"] {
+  --orange: #f7e359;
+  --brown: #543f13;
+  --brown-2: #725518;
+  --light-brown: #857d1c;
+  --orange-shadow: #caad2e77;
+  --orange-shadow-2: #af9b2877;
+  --brown-background: #e7bc28;
+  --beige: #fff8b2;
+}
+
+body[data-game="PL4"], [for="PL4"] {
+  --orange: #fffac3;
+  --brown: #08224a;
+  --brown-2: #18478f;
+  --light-brown: #2867c7;
+  --orange-shadow: #08224a77;
+  --orange-shadow-2: #0b2c5c77;
+  --brown-background: #fff79b;
+  --beige: #f7fdff;
 }
 
 html {
@@ -250,10 +271,6 @@ body:not(.small-screen) #nds {
   border: 2px solid var(--brown);
   box-shadow: 0 4px var(--brown), inset 0 0 1px 1px var(--white-shadow);
 
-  &.minigame {
-    background-color: var(--blue);
-  }
-
   &.playing {
     transform: translateY(4px);
     box-shadow: none;
@@ -426,16 +443,20 @@ footer {
   font-weight: bold;
   color: var(--brown);
   background-color: var(--beige);
-  border-top: 2px solid var(--brown-background);
-  outline: 4px solid var(--beige);
+  border-top: 4px solid var(--brown);
+  
   > span {
     margin-right: 6px;
   }
 }
 
 .link {
-  color: var(--brown-background);
+  color: var(--light-brown);
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .badge {
@@ -490,9 +511,9 @@ footer {
 
 .filtering {
   &.input, &.button, .input, .button {
-    color: var(--orange);
-    border-color: var(--orange);
-    box-shadow: 0 3px var(--orange), inset 0 0 1px 1px var(--white-shadow);
+    color: var(--light-brown);
+    border-color: var(--light-brown);
+    box-shadow: 0 3px var(--light-brown), inset 0 0 1px 1px var(--white-shadow);
   }
 }
 

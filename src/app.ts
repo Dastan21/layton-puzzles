@@ -194,6 +194,7 @@ function unload (): void {
 
 // on load
 const game = new Game(settings.game)
+document.body.setAttribute('data-game', settings.game)
 const nds = document.getElementById('nds') as NDS
 
 window.wasmReady = onReady

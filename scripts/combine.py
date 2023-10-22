@@ -11,7 +11,7 @@ try:
     if len(sys.argv) > 2:
         puzzles_folder = sys.argv[2]
 except:
-    print(f'Usage: {sys.argv[0]} GAME_NAME [FOLDER=\'puzzles\']')
+    print(f'Usage: python {sys.argv[0]} GAME_NAME [FOLDER=\'puzzles\']')
     exit(0)
 
 game_path = 'public/assets/' + game + '/'
