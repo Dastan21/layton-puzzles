@@ -473,7 +473,6 @@ footer {
   position: relative;
   width: fit-content;
   padding: 8px 10px;
-  gap: 4px;
   color: var(--brown);
   border: 2px solid var(--brown);
   border-radius: 4px;
@@ -497,6 +496,10 @@ footer {
 .button {
   padding: 6px;
   cursor: pointer;
+
+  > span {
+    padding: 0 4px;
+  }
 
   &:active, &:disabled {
     transform: translateY(3px);
