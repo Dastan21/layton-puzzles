@@ -18,6 +18,7 @@
 
 :root, [for="PL1"], [for="PL2"] {
   --orange: #ca9a2e;
+  --orange-light: #ffae35;
   --brown: #472a11;
   --brown-2: #5a4212;
   --light-brown: #7c5e1b;
@@ -31,6 +32,7 @@
 
 body[data-game="PL3"], [for="PL3"] {
   --orange: #f7e359;
+  --orange-light: #fff134;
   --brown: #543f13;
   --brown-2: #725518;
   --light-brown: #857d1c;
@@ -42,6 +44,7 @@ body[data-game="PL3"], [for="PL3"] {
 
 body[data-game="PL4"], [for="PL4"] {
   --orange: #fffac3;
+  --orange-light: #fff79b;
   --brown: #08224a;
   --brown-2: #0f336a;
   --light-brown: #194e9f;
@@ -138,10 +141,6 @@ body:not(.small-screen) #nds {
   .settings-fold {
     display: none;
   }
-}
-
-.debug {
-  opacity: .3;
 }
 
 #games {
@@ -391,6 +390,7 @@ body:not(.small-screen) #nds {
       border: none;
       background: none;
       transition: 100ms ease;
+      outline: none;
       cursor: pointer;
 
       &:active {
