@@ -1,5 +1,5 @@
 import { type GameType } from '../game.js'
-import { download, fetchFile } from '../utils/api.js'
+import { fetchFile } from '../utils/api.js'
 import { onClick, onInput, onPress } from '../utils/dom.js'
 
 type Context2D = [
@@ -437,15 +437,6 @@ export default class NDS extends HTMLElement {
     this._state = NDSState.Off
   }
 
-  // DEBUG
-  public saveState (savestate: string): void {
-    if (window.Module._stateSave() === 0) return
-    const ptr: number = window.Module._stateGetPointer()
-    const len: number = window.Module._stateGetSize()
-    const arrBuf: Uint8Array = window.Module.HEAPU8.slice(ptr, ptr + len)
-    download(arrBuf, `${savestate}.state`)
-  }
-
   public async loadState (savestate: string): Promise<void> {
     if (this._state === NDSState.Off) return
 
@@ -466,21 +457,12 @@ export default class NDS extends HTMLElement {
     await this.loadState(this._savestate)
   }
 
-  public takeScreenshot (screen: 0 | 1 = 1, name?: string): void {
-    const url = this.screenCanvas[screen].canvas?.toDataURL('image/jpeg')
-    if (url == null) return
-    const filename = (name ?? `screen${screen}`).replace(/\.[^.]+$/, '') + '.jpg'
-    download(url, filename)
-  }
-
   private runFrame (): void {
     if (!this.isPlaying) return
 
     this.runAudio()
 
-    const rect = window.debug.rect ?? [0, 0, 0, 0]
-
-    const isTouching = Number(this.canTouch && this._touchData.pressed && !this.isInRect(new DOMRect(...rect)))
+    const isTouching = Number(this.canTouch && this._touchData.pressed)
     const micEnabled = Number(this._microphone)
     window.Module._runFrame(0, isTouching, this._touchData.x, this._touchData.y, micEnabled)
     window.Module._runFrame(1, isTouching, this._touchData.x, this._touchData.y, micEnabled)
@@ -488,8 +470,6 @@ export default class NDS extends HTMLElement {
     if (this.ctx2d[0] == null || this.ctx2d[1] == null || this.screenData[0] == null || this.screenData[1] == null) return
     this.ctx2d[0].putImageData(this.screenData[0], 0, 0)
     this.ctx2d[1].putImageData(this.screenData[1], 0, 0)
-    this.ctx2d[1].fillStyle = '#ff000055'
-    this.ctx2d[1].fillRect(rect[0], rect[1], rect[2], rect[3])
   }
 
   public isInRect (r: DOMRect): boolean {

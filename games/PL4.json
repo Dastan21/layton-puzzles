@@ -1,6 +1,1588 @@
 {
   "id": "PL4",
-  "name": "Professeur Layton et l'appel du spectre",
-  "puzzles": [],
-  "minigames": []
+  "name": "Professeur Layton et l'Appel du Spectre",
+  "puzzles": [
+    {
+      "number": "001",
+      "name": "Message caché",
+      "solvedBy": "Emmy Altava",
+      "location": "Route de Misthallery",
+      "type": "Placement",
+      "picarats": 10
+    },
+    {
+      "number": "002",
+      "name": "Séance photo",
+      "givenBy": "Charlie",
+      "solvedBy": "Professeur Layton",
+      "location": "Route du pont",
+      "type": "Sélection",
+      "picarats": 20
+    },
+    {
+      "number": "003",
+      "name": "En faire des caisses",
+      "solvedBy": "Emmy Altava",
+      "location": "Maison en ruine",
+      "type": "Sélection",
+      "picarats": 20
+    },
+    {
+      "number": "004",
+      "name": "Un peu d'ordre",
+      "givenBy": "Janine",
+      "solvedBy": "Professeur Layton",
+      "location": "Carrefour",
+      "type": "Puzzle",
+      "picarats": 30
+    },
+    {
+      "number": "005",
+      "name": "Traversée pacifique",
+      "givenBy": "Bucky",
+      "solvedBy": "Professeur Layton",
+      "location": "Quai sud",
+      "type": "Stratégie",
+      "picarats": 25
+    },
+    {
+      "number": "006",
+      "name": "Code postal",
+      "solvedBy": "Professeur Layton",
+      "location": "Jardin des Triton",
+      "type": "Placement",
+      "picarats": 30
+    },
+    {
+      "number": "007",
+      "name": "Serpillères jetables",
+      "solvedBy": "Emmy Altava",
+      "location": "Vestibule",
+      "type": "Écrire la réponse",
+      "picarats": 45
+    },
+    {
+      "number": "008",
+      "name": "Galerie des glaces",
+      "solvedBy": "Emmy Altava",
+      "location": "Salon",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "009",
+      "name": "Rideau !",
+      "givenBy": "Beth",
+      "solvedBy": "Professeur Layton",
+      "location": "Vestibule",
+      "type": "QCM",
+      "picarats": 20
+    },
+    {
+      "number": "010",
+      "name": "Fromage à la clé",
+      "solvedBy": "Emmy Altava",
+      "location": "Quartier est",
+      "type": "Déplacements",
+      "picarats": 45
+    },
+    {
+      "number": "011",
+      "name": "Sacrée descente",
+      "givenBy": "Vernon",
+      "solvedBy": "Emmy Altava",
+      "location": "Route sinueuse",
+      "type": "QCM",
+      "picarats": 10
+    },
+    {
+      "number": "012",
+      "name": "Inspection chiffrée",
+      "solvedBy": "Professeur Layton",
+      "location": "Hall de l'hôtel",
+      "type": "Écrire la réponse",
+      "picarats": 35
+    },
+    {
+      "number": "013",
+      "name": "Le parc des seaux",
+      "solvedBy": "Emmy Altava",
+      "location": "Chez Paddy (ext.)",
+      "type": "Tracé de traits",
+      "picarats": 30
+    },
+    {
+      "number": "014",
+      "name": "Garçon, l'addition !",
+      "solvedBy": "Emmy Altava",
+      "location": "Chez Paddy (int.)",
+      "type": "QCM",
+      "picarats": 20
+    },
+    {
+      "number": "015",
+      "name": "Repas à la carte",
+      "givenBy": "Dominica",
+      "solvedBy": "Professeur Layton",
+      "location": "Pike Lane",
+      "type": "Entourer",
+      "picarats": 20
+    },
+    {
+      "number": "016",
+      "name": "Ohé, du bateau !",
+      "givenBy": "Doland",
+      "solvedBy": "Professeur Layton",
+      "location": "Salon",
+      "type": "QCM",
+      "picarats": 20
+    },
+    {
+      "number": "017",
+      "name": "Fausses jumelles",
+      "givenBy": "Molly",
+      "solvedBy": "Professeur Layton",
+      "location": "Murray Street",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "018",
+      "name": "Ampoules grillées",
+      "solvedBy": "Luke Triton",
+      "location": "Quai central",
+      "type": "Écrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "019",
+      "name": "Poissons ronchons",
+      "givenBy": "Marion",
+      "solvedBy": "Luke Triton",
+      "location": "Laboratoire (int.)",
+      "type": "Tracé de traits",
+      "picarats": 30
+    },
+    {
+      "number": "020",
+      "name": "Chats cachés",
+      "givenBy": "Hugo",
+      "solvedBy": "Professeur Layton",
+      "location": "Résidences",
+      "type": "Écrire la réponse",
+      "picarats": 35
+    },
+    {
+      "number": "021",
+      "name": "Chiffres embrumés",
+      "givenBy": "Browne",
+      "solvedBy": "Emmy Altava",
+      "location": "Chapellerie",
+      "type": "Placement",
+      "picarats": 40
+    },
+    {
+      "number": "022",
+      "name": "Papier à trou",
+      "solvedBy": "Luke Triton",
+      "location": "Chambre 301",
+      "type": "Tracé de traits",
+      "picarats": 30
+    },
+    {
+      "number": "023",
+      "name": "Débris matheux",
+      "givenBy": "Agent Chippe",
+      "solvedBy": "Professeur Layton",
+      "location": "Hôtel",
+      "type": "Tracé de traits",
+      "picarats": 30
+    },
+    {
+      "number": "024",
+      "name": "Triste lune",
+      "givenBy": "Aldus",
+      "solvedBy": "Professeur Layton",
+      "location": "Chez Paddy (ext.)",
+      "type": "Placement",
+      "picarats": 20
+    },
+    {
+      "number": "025",
+      "name": "Déduction gourmande",
+      "givenBy": "Paddy",
+      "solvedBy": "Professeur Layton",
+      "location": "Chez Paddy (int.)",
+      "type": "Écrire la réponse",
+      "picarats": 35
+    },
+    {
+      "number": "026",
+      "name": "Panne de soucoupe",
+      "givenBy": "Clarence",
+      "solvedBy": "Luke Triton",
+      "location": "Parc d'Ely Nord",
+      "type": "Déplacements",
+      "picarats": 65
+    },
+    {
+      "number": "027",
+      "name": "Les Bungalows Coco",
+      "givenBy": "Janine",
+      "solvedBy": "Professeur Layton",
+      "location": "Murray Street",
+      "type": "Entourer",
+      "picarats": 35
+    },
+    {
+      "number": "028",
+      "name": "Collection de matous",
+      "givenBy": "Hugo",
+      "solvedBy": "Professeur Layton",
+      "location": "Résidences",
+      "type": "Sélection",
+      "picarats": 30
+    },
+    {
+    "number": "029",
+      "name": "Calculs enfantins",
+      "givenBy": "Finch",
+      "solvedBy": "Luke Triton",
+      "location": "Carrefour",
+      "type": "Écrire la réponse",
+      "picarats": 35
+    },
+    {
+      "number": "030",
+      "name": "L'inventaire",
+      "givenBy": "Olga",
+      "solvedBy": "Professeur Layton",
+      "location": "Bibliothèque (int.)",
+      "type": "Écrire la réponse",
+      "picarats": 35
+    },
+    {
+      "number": "031",
+      "name": "Lumière hautaine",
+      "givenBy": "Sebastian",
+      "solvedBy": "Emmy Altava",
+      "location": "Usine désaffectée",
+      "type": "Écrire la réponse",
+      "picarats": 50
+    },
+    {
+      "number": "032",
+      "name": "Ménage royal",
+      "givenBy": "Beth",
+      "solvedBy": "Professeur Layton",
+      "location": "Vestibule",
+      "type": "Itinéraire chiffré",
+      "picarats": 35
+    },
+    {
+      "number": "033",
+      "name": "Rencontre fruitée",
+      "givenBy": "Marilyn",
+      "solvedBy": "Professeur Layton",
+      "location": "Marché (sud)",
+      "type": "Entourer",
+      "picarats": 25
+    },
+    {
+      "number": "034",
+      "name": "Rangez les pommes !",
+      "solvedBy": "Professeur Layton",
+      "location": "Marché (centre)",
+      "type": "Placement",
+      "picarats": 30
+    },
+    {
+      "number": "035",
+      "name": "Confuse confiserie",
+      "givenBy": "Tatie Taffy",
+      "solvedBy": "Professeur Layton",
+      "location": "Marché (entrée)",
+      "type": "Écrire la réponse",
+      "picarats": 35
+    },
+    {
+      "number": "036",
+      "name": "L'invasion des uns",
+      "givenBy": "Gus",
+      "solvedBy": "Professeur Layton",
+      "location": "Marché (centre)",
+      "type": "Écrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "037",
+      "name": "Pile en face",
+      "givenBy": "Stan",
+      "solvedBy": "Professeur Layton",
+      "location": "Marché (ouest)",
+      "type": "Placement",
+      "picarats": 20
+    },
+    {
+      "number": "038",
+      "name": "Dédale réversible 1",
+      "givenBy": "Louis",
+      "solvedBy": "Professeur Layton",
+      "location": "Marché (sud)",
+      "type": "Labyrinthe",
+      "picarats": 40
+    },
+    {
+      "number": "039",
+      "name": "Médailles du corbeau",
+      "givenBy": "Roddy",
+      "solvedBy": "Professeur Layton",
+      "location": "Marché (nord)",
+      "type": "Déplacements",
+      "picarats": 35
+    },
+    {
+      "number": "040",
+      "name": "Coups de pompe",
+      "givenBy": "Stan",
+      "solvedBy": "Professeur Layton",
+      "location": "Chemin forestier",
+      "type": "QCM",
+      "picarats": 40
+    },
+    {
+      "number": "041",
+      "name": "Verres cosmiques",
+      "givenBy": "Louis",
+      "solvedBy": "Professeur Layton",
+      "location": "Route du pont",
+      "type": "Placement",
+      "picarats": 20
+    },
+    {
+      "number": "042",
+      "name": "Le plus grand angle",
+      "givenBy": "Yamada",
+      "solvedBy": "Luke Triton",
+      "location": "Grand-place",
+      "type": "Écrire la réponse",
+      "picarats": 55
+    },
+    {
+      "number": "043",
+      "name": "Un grand impact",
+      "givenBy": "Agent Chippe",
+      "solvedBy": "Professeur Layton",
+      "location": "Commissariat",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "044",
+      "name": "Portraits crachés",
+      "givenBy": "Agent Chippe",
+      "solvedBy": "Luke Triton",
+      "location": "Mur du réservoir",
+      "type": "Placement",
+      "picarats": 30
+    },
+    {
+      "number": "045",
+      "name": "Recto verso",
+      "solvedBy": "Professeur Layton",
+      "location": "Quai nord",
+      "type": "Stratégie",
+      "picarats": 30
+    },
+    {
+      "number": "046",
+      "name": "Voie toute tracée",
+      "solvedBy": "Professeur Layton",
+      "location": "Jardin en friche",
+      "type": "Tracé de traits",
+      "picarats": 50
+    },
+    {
+      "number": "047",
+      "name": "Serrure cryptée",
+      "solvedBy": "Luke Triton",
+      "location": "Galerie",
+      "type": "Sélection",
+      "picarats": 40
+    },
+    {
+      "number": "048",
+      "name": "La toile d'araignée",
+      "solvedBy": "Emmy Altava",
+      "location": "Haut des escaliers",
+      "type": "Sélection",
+      "picarats": 35
+    },
+    {
+      "number": "049",
+      "name": "La clé du portrait",
+      "solvedBy": "Luke Triton",
+      "location": "Entrée du manoir",
+      "type": "QCM",
+      "picarats": 40
+    },
+    {
+      "number": "050",
+      "name": "La 26e carte",
+      "givenBy": "Corvus",
+      "solvedBy": "Professeur Layton",
+      "location": "Coulisses",
+      "type": "Sélection",
+      "picarats": 40
+    },
+    {
+      "number": "051",
+      "name": "Traversée familiale",
+      "givenBy": "Roddy",
+      "solvedBy": "Professeur Layton",
+      "location": "Marché (nord)",
+      "type": "Stratégie",
+      "picarats": 40
+    },
+    {
+      "number": "052",
+      "name": "Que suis-je ?",
+      "givenBy": "Toutim",
+      "solvedBy": "Professeur Layton",
+      "location": "Marché (ouest)",
+      "type": "Entourer",
+      "picarats": 20
+    },
+    {
+      "number": "053",
+      "name": "Gros pavés",
+      "givenBy": "Delmona",
+      "solvedBy": "Emmy Altava",
+      "location": "Université (int.)",
+      "type": "Sélection",
+      "picarats": 20
+    },
+    {
+      "number": "054",
+      "name": "Sac surprise",
+      "solvedBy": "Emmy Altava",
+      "location": "Bureau de Layton",
+      "type": "Puzzle",
+      "picarats": 45
+    },
+    {
+      "number": "055",
+      "name": "Trop haut-de-forme",
+      "solvedBy": "Emmy Altava",
+      "location": "Bureau de Layton",
+      "type": "Puzzle",
+      "picarats": 45
+    },
+    {
+      "number": "056",
+      "name": "Langage des fleurs",
+      "givenBy": "Cornelius",
+      "solvedBy": "Emmy Altava",
+      "location": "Boutique de fleurs",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "057",
+      "name": "Itinéraire peu clair",
+      "solvedBy": "Emmy Altava",
+      "location": "Arrêt de bus",
+      "type": "Tracé de traits",
+      "picarats": 45
+    },
+    {
+      "number": "058",
+      "name": "Parapluie perdu",
+      "givenBy": "Mick",
+      "solvedBy": "Emmy Altava",
+      "location": "Musée (ext.)",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "059",
+      "name": "Expo intemporelle",
+      "givenBy": "Danny",
+      "solvedBy": "Emmy Altava",
+      "location": "Musée (RDC)",
+      "type": "Entourer",
+      "picarats": 30
+    },
+    {
+      "number": "060",
+      "name": "Dans ces os-là",
+      "solvedBy": "Emmy Altava",
+      "location": "Musée (RDC)",
+      "type": "Écrire la réponse",
+      "picarats": 25
+    },
+    {
+      "number": "061",
+      "name": "À faire classer",
+      "solvedBy": "Emmy Altava",
+      "location": "Salle des archives",
+      "type": "Sélection",
+      "picarats": 30
+    },
+    {
+      "number": "062",
+      "name": "Ma meilleure amie",
+      "givenBy": "Maggy",
+      "solvedBy": "Professeur Layton",
+      "location": "Grand-place",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "063",
+      "name": "L'erreur du fiston",
+      "givenBy": "Sean",
+      "solvedBy": "Luke Triton",
+      "location": "Faubourg paisible",
+      "type": "Entourer",
+      "picarats": 30
+    },
+    {
+      "number": "064",
+      "name": "La part du chef",
+      "givenBy": "Gus",
+      "solvedBy": "Professeur Layton",
+      "location": "Sentier",
+      "type": "QCM",
+      "picarats": 25
+    },
+    {
+      "number": "065",
+      "name": "Plein les fouilles",
+      "givenBy": "Nate",
+      "solvedBy": "Professeur Layton",
+      "location": "Camp de base",
+      "type": "Déplacements",
+      "picarats": 35
+    },
+    {
+      "number": "066",
+      "name": "Tri runique",
+      "solvedBy": "Luke Triton",
+      "location": "Site de fouilles",
+      "type": "Placement",
+      "picarats": 40
+    },
+    {
+      "number": "067",
+      "name": "Moment de réflexion",
+      "givenBy": "Nate",
+      "solvedBy": "Professeur Layton",
+      "location": "Camp de base",
+      "type": "Écrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "068",
+      "name": "Minet, minet !",
+      "givenBy": "Hugo",
+      "solvedBy": "Luke Triton",
+      "location": "Résidences",
+      "type": "Stratégie",
+      "picarats": 25
+    },
+    {
+      "number": "069",
+      "name": "Une part d'ombre",
+      "givenBy": "Clarence",
+      "solvedBy": "Professeur Layton",
+      "location": "Parc d'Ely Nord",
+      "type": "Écrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "070",
+      "name": "Trois voisins",
+      "givenBy": "Dominica",
+      "solvedBy": "Professeur Layton",
+      "location": "Pike Lane",
+      "type": "Placement",
+      "picarats": 30
+    },
+    {
+      "number": "071",
+      "name": "Jeux d'eau",
+      "givenBy": "Charlie",
+      "solvedBy": "Professeur Layton",
+      "location": "Great Ely Street",
+      "type": "Stratégie",
+      "picarats": 55
+    },
+    {
+      "number": "072",
+      "name": "À vos bérets !",
+      "givenBy": "Browne",
+      "solvedBy": "Professeur Layton",
+      "location": "Chapellerie en ruine",
+      "type": "Placement",
+      "picarats": 20
+    },
+    {
+      "number": "073",
+      "name": "La bouteille de trop",
+      "givenBy": "Joe",
+      "solvedBy": "Professeur Layton",
+      "location": "Hall de l'hôtel",
+      "type": "Stratégie",
+      "picarats": 45
+    },
+    {
+      "number": "074",
+      "name": "Éclairage d'appoint",
+      "givenBy": "Molly",
+      "solvedBy": "Professeur Layton",
+      "location": "Hall de l'hôtel",
+      "type": "Placement",
+      "picarats": 40
+    },
+    {
+      "number": "075",
+      "name": "Rajouter une couche",
+      "givenBy": "Foley",
+      "solvedBy": "Luke Triton",
+      "location": "Bibliothèque (int.)",
+      "type": "Écrire la réponse",
+      "picarats": 45
+    },
+    {
+      "number": "076",
+      "name": "Le bon placement",
+      "givenBy": "Finch",
+      "solvedBy": "Luke Triton",
+      "location": "Pont de l'escalier",
+      "type": "Placement",
+      "picarats": 50
+    },
+    {
+      "number": "077",
+      "name": "Sonner les cloches",
+      "givenBy": "Sebastian",
+      "solvedBy": "Luke Triton",
+      "location": "Usine désaffectée",
+      "type": "Stratégie",
+      "picarats": 35
+    },
+    {
+      "number": "078",
+      "name": "Nappe fétiche",
+      "givenBy": "Beth",
+      "solvedBy": "Luke Triton",
+      "location": "Vestibule",
+      "type": "Tracé de traits",
+      "picarats": 60
+    },
+    {
+      "number": "079",
+      "name": "Douces opérations",
+      "givenBy": "Tatie Taffy",
+      "solvedBy": "Professeur Layton",
+      "location": "Marché (entrée)",
+      "type": "QCM",
+      "picarats": 50
+    },
+    {
+      "number": "080",
+      "name": "Peinture express",
+      "givenBy": "Shackwell",
+      "solvedBy": "Professeur Layton",
+      "location": "Marché noir",
+      "type": "Écrire la réponse",
+      "picarats": 55
+    },
+    {
+      "number": "081",
+      "name": "Quelle cruche !",
+      "givenBy": "Delmona",
+      "solvedBy": "Professeur Layton",
+      "location": "Université (int.)",
+      "type": "Écrire la réponse",
+      "picarats": 45
+    },
+    {
+      "number": "082",
+      "name": "Faites l'autruche !",
+      "givenBy": "Rosa",
+      "solvedBy": "Professeur Layton",
+      "location": "Bureau de Layton",
+      "type": "Puzzle",
+      "picarats": 30
+    },
+    {
+      "number": "083",
+      "name": "12 billes argentées",
+      "givenBy": "Monica",
+      "solvedBy": "Professeur Layton",
+      "location": "Secrétariat",
+      "type": "Solitaire",
+      "picarats": 35
+    },
+    {
+      "number": "084",
+      "name": "Tulipes magiques",
+      "givenBy": "Cornelius",
+      "solvedBy": "Emmy Altava",
+      "location": "Boutique de fleurs",
+      "type": "Stratégie",
+      "picarats": 40
+    },
+    {
+      "number": "085",
+      "name": "Arrêts fréquents",
+      "givenBy": "Mick",
+      "solvedBy": "Emmy Altava",
+      "location": "Musée (ext.)",
+      "type": "Écrire la réponse",
+      "picarats": 55
+    },
+    {
+      "number": "086",
+      "name": "Défense d'y voir",
+      "givenBy": "Chappy",
+      "solvedBy": "Professeur Layton",
+      "location": "Musée (1er étage)",
+      "type": "Puzzle",
+      "picarats": 60
+    },
+    {
+      "number": "087",
+      "name": "Dédale réversible 2",
+      "givenBy": "Hans",
+      "solvedBy": "Emmy Altava",
+      "location": "Réverbère tordu",
+      "type": "Labyrinthe",
+      "picarats": 50
+    },
+    {
+      "number": "088",
+      "name": "Feu de bois",
+      "solvedBy": "Professeur Layton",
+      "location": "Bureau de Jakes",
+      "type": "Écrire la réponse",
+      "picarats": 45
+    },
+    {
+      "number": "089",
+      "name": "Vin sur vin",
+      "solvedBy": "Professeur Layton",
+      "location": "Cave",
+      "type": "Placement",
+      "picarats": 50
+    },
+    {
+      "number": "090",
+      "name": "Marionnettiste",
+      "givenBy": "Rosa",
+      "solvedBy": "Professeur Layton",
+      "location": "Bureau de Layton",
+      "type": "Puzzle",
+      "picarats": 45
+    },
+    {
+      "number": "091",
+      "name": "À portée de voix",
+      "givenBy": "Greppe",
+      "solvedBy": "Professeur Layton",
+      "location": "Chez Paddy (int.)",
+      "type": "Placement",
+      "picarats": 50
+    },
+    {
+      "number": "092",
+      "name": "Clés en main",
+      "solvedBy": "Luke Triton",
+      "location": "Salle d'interro.",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "093",
+      "name": "Sortie gardée",
+      "solvedBy": "Professeur Layton",
+      "location": "Corridor",
+      "type": "Tracé de traits",
+      "picarats": 40
+    },
+    {
+      "number": "094",
+      "name": "Service d'ordre",
+      "givenBy": "Hans",
+      "solvedBy": "Emmy Altava",
+      "location": "Réverbère tordu",
+      "type": "Placement",
+      "picarats": 40
+    },
+    {
+      "number": "095",
+      "name": "Adresse énigmatique",
+      "givenBy": "Maggie",
+      "solvedBy": "Luke Triton",
+      "location": "Grand-place",
+      "type": "Écrire la réponse",
+      "picarats": 25
+    },
+    {
+      "number": "096",
+      "name": "Le tour des tours",
+      "givenBy": "Yamada",
+      "solvedBy": "Emmy Altava",
+      "location": "Grand-place",
+      "type": "Entourer",
+      "picarats": 35
+    },
+    {
+      "number": "097",
+      "name": "Goûter chocolaté",
+      "givenBy": "Sean",
+      "solvedBy": "Luke Triton",
+      "location": "Faubourg paisible",
+      "type": "Écrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "098",
+      "name": "Code secret",
+      "givenBy": "Gus",
+      "solvedBy": "Luke Triton",
+      "location": "Sentier",
+      "type": "QCM",
+      "picarats": 50
+    },
+    {
+      "number": "099",
+      "name": "Quelle urne est-il ?",
+      "givenBy": "Nate",
+      "solvedBy": "Professeur Layton",
+      "location": "Camp de base",
+      "type": "QCM",
+      "picarats": 40
+    },
+    {
+      "number": "100",
+      "name": "Chat fugueur",
+      "givenBy": "Hugo",
+      "solvedBy": "Emmy Altava",
+      "location": "Résidences",
+      "type": "Écrire la réponse",
+      "picarats": 35
+    },
+    {
+      "number": "101",
+      "name": "Morceaux choisis",
+      "givenBy": "Marion",
+      "solvedBy": "Luke Triton",
+      "location": "Laboratoire (int.)",
+      "type": "Tracé de traits",
+      "picarats": 45
+    },
+    {
+      "number": "102",
+      "name": "Bris de verre",
+      "givenBy": "Janine",
+      "solvedBy": "Professeur Layton",
+      "location": "Murray Street",
+      "type": "Écrire la réponse",
+      "picarats": 25
+    },
+    {
+      "number": "103",
+      "name": "Seau dans le vide",
+      "givenBy": "Clarence",
+      "solvedBy": "Luke Triton",
+      "location": "Parc d'Ely Nord",
+      "type": "Sélection",
+      "picarats": 30
+    },
+    {
+      "number": "104",
+      "name": "De pont en pont",
+      "givenBy": "Dominica",
+      "solvedBy": "Professeur Layton",
+      "location": "Pike Lane",
+      "type": "Entourer",
+      "picarats": 50
+    },
+    {
+      "number": "105",
+      "name": "Jet de fleurs",
+      "givenBy": "Aldus",
+      "solvedBy": "Professeur Layton",
+      "location": "Chez Paddy (ext.)",
+      "type": "Écrire la réponse",
+      "picarats": 30
+    },
+    {
+      "number": "106",
+      "name": "Lâcher de pommes",
+      "givenBy": "Charlie",
+      "solvedBy": "Professeur Layton",
+      "location": "Great Ely Street",
+      "type": "Trampolines",
+      "picarats": 45
+    },
+    {
+      "number": "107",
+      "name": "Chambres à compter",
+      "givenBy": "Joe",
+      "solvedBy": "Professeur Layton",
+      "location": "Hall de l'hôtel",
+      "type": "Écrire la réponse",
+      "picarats": 45
+    },
+    {
+      "number": "108",
+      "name": "La vraie amulette",
+      "givenBy": "Molly",
+      "solvedBy": "Professeur Layton",
+      "location": "Hall de l'hôtel",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "109",
+      "name": "Ordre littéraire",
+      "givenBy": "Olga",
+      "solvedBy": "Luke Triton",
+      "location": "Bibliothèque (int.)",
+      "type": "Placement",
+      "picarats": 40
+    },
+    {
+      "number": "110",
+      "name": "16 billes argentées",
+      "givenBy": "Thomas",
+      "solvedBy": "Luke Triton",
+      "location": "Quartier est",
+      "type": "Solitaire",
+      "picarats": 55
+    },
+    {
+      "number": "111",
+      "name": "Convives en vrac",
+      "givenBy": "Hannah",
+      "solvedBy": "Emmy Altava",
+      "location": "Résidence Triton",
+      "type": "Sélection",
+      "picarats": 35
+    },
+    {
+      "number": "112",
+      "name": "Briques-à-brac",
+      "givenBy": "Brock",
+      "solvedBy": "Professeur Layton",
+      "location": "Maison en ruine",
+      "type": "Puzzle",
+      "picarats": 30
+    },
+    {
+      "number": "113",
+      "name": "Carafes bien pleines",
+      "givenBy": "Marilyn",
+      "solvedBy": "Emmy Altava",
+      "location": "Marché (sud)",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "114",
+      "name": "Crypto-machine",
+      "givenBy": "Corvus",
+      "solvedBy": "Professeur Layton",
+      "location": "Marché (centre)",
+      "type": "Écrire la réponse",
+      "picarats": 35
+    },
+    {
+      "number": "115",
+      "name": "Chemin détourné",
+      "givenBy": "Roddy",
+      "solvedBy": "Luke Triton",
+      "location": "Marché (nord)",
+      "type": "Tracé de traits",
+      "picarats": 75
+    },
+    {
+      "number": "116",
+      "name": "Vitrail à restaurer",
+      "givenBy": "Toutim",
+      "solvedBy": "Luke Triton",
+      "location": "Marché (ouest)",
+      "type": "Placement",
+      "picarats": 30
+    },
+    {
+      "number": "117",
+      "name": "Question d'argent",
+      "givenBy": "Shackwell",
+      "solvedBy": "Emmy Altava",
+      "location": "Marché noir",
+      "type": "Sélection",
+      "picarats": 45
+    },
+    {
+      "number": "118",
+      "name": "Dans les étoiles",
+      "givenBy": "Louis",
+      "solvedBy": "Luke Triton",
+      "location": "Route du pont",
+      "type": "Placement",
+      "picarats": 30
+    },
+    {
+      "number": "119",
+      "name": "Pommes à tout faire",
+      "givenBy": "Delmona",
+      "solvedBy": "Professeur Layton",
+      "location": "Université (int.)",
+      "type": "Puzzle",
+      "picarats": 60
+    },
+    {
+      "number": "120",
+      "name": "Jus de fruits",
+      "givenBy": "Rosa",
+      "solvedBy": "Professeur Layton",
+      "location": "Bureau de Layton",
+      "type": "Puzzle",
+      "picarats": 30
+    },
+    {
+      "number": "121",
+      "name": "Enquête de famille",
+      "givenBy": "Monica",
+      "solvedBy": "Professeur Layton",
+      "location": "Secrétariat",
+      "type": "Écrire la réponse",
+      "picarats": 45
+    },
+    {
+      "number": "122",
+      "name": "Équilibre fruitier",
+      "givenBy": "Cornelius",
+      "solvedBy": "Emmy Altava",
+      "location": "Boutique de fleurs",
+      "type": "Écrire la réponse",
+      "picarats": 35
+    },
+    {
+      "number": "123",
+      "name": "Chaînon bluffant",
+      "givenBy": "Mick",
+      "solvedBy": "Luke Triton",
+      "location": "Musée (ext.)",
+      "type": "Sélection",
+      "picarats": 35
+    },
+    {
+      "number": "124",
+      "name": "Antiques aspics",
+      "givenBy": "Danny",
+      "solvedBy": "Luke Triton",
+      "location": "Musée (RDC)",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "125",
+      "name": "La route du spectre",
+      "givenBy": "Clea",
+      "solvedBy": "Luke Triton",
+      "location": "Grille décrépite",
+      "type": "Entourer",
+      "picarats": 35
+    },
+    {
+      "number": "126",
+      "name": "Miroir, miroir",
+      "givenBy": "Agent Chippe",
+      "solvedBy": "Professeur Layton",
+      "location": "Entrée",
+      "type": "QCM",
+      "picarats": 40
+    },
+    {
+      "number": "127",
+      "name": "Allô j'écoute ?",
+      "solvedBy": "Emmy Altava",
+      "location": "Salle d'interro.",
+      "type": "Écrire la réponse",
+      "picarats": 35
+    },
+    {
+      "number": "128",
+      "name": "Lâcher de pastèque",
+      "givenBy": "Nancy",
+      "solvedBy": "Emmy Altava",
+      "location": "Arche en ruine",
+      "type": "Trampolines",
+      "picarats": 60
+    },
+    {
+      "number": "129",
+      "name": "La porte de l'usine",
+      "solvedBy": "Emmy Altava",
+      "location": "Accès caché",
+      "type": "Sélection",
+      "picarats": 30
+    },
+    {
+      "number": "130",
+      "name": "Poids lourds",
+      "givenBy": "Barry",
+      "solvedBy": "Emmy Altava",
+      "location": "1er niveau",
+      "type": "Placement",
+      "picarats": 30
+    },
+    {
+      "number": "131",
+      "name": "À l'aveuglette",
+      "solvedBy": "Professeur Layton",
+      "location": "2e niveau",
+      "type": "Labyrinthe",
+      "picarats": 30
+    },
+    {
+      "number": "132",
+      "name": "Drôle de pinceau",
+      "givenBy": "Foley",
+      "solvedBy": "Professeur Layton",
+      "location": "3e niveau",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "133",
+      "name": "Pincées de caisses",
+      "solvedBy": "Professeur Layton",
+      "location": "3e niveau",
+      "type": "Stratégie",
+      "picarats": 50
+    },
+    {
+      "number": "134",
+      "name": "Moteur en kit",
+      "givenBy": "Chef ingénieur",
+      "solvedBy": "Professeur Layton",
+      "location": "4e niveau",
+      "type": "Puzzle",
+      "picarats": 45
+    },
+    {
+      "number": "135",
+      "name": "Tout faire sauter",
+      "solvedBy": "Emmy Altava",
+      "location": "5e niveau",
+      "type": "Placement",
+      "picarats": 50
+    },
+    {
+      "number": "136",
+      "name": "Ça fait des lustres",
+      "givenBy": "Beth",
+      "solvedBy": "Professeur Layton",
+      "location": "Vestibule",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "137",
+      "name": "Frères d'embrouille",
+      "givenBy": "Clea",
+      "solvedBy": "Professeur Layton",
+      "location": "Grille décrépite",
+      "type": "Écrire la réponse",
+      "picarats": 45
+    },
+    {
+      "number": "138",
+      "name": "Méandres de câbles",
+      "solvedBy": "Emmy Altava",
+      "location": "Combat final",
+      "type": "Sélection",
+      "picarats": 40
+    },
+    {
+      "number": "139",
+      "name": "Arrêt d'urgence 1",
+      "solvedBy": "Emmy Altava",
+      "location": "Combat final",
+      "type": "Stratégie",
+      "picarats": 40
+    },
+    {
+      "number": "140",
+      "name": "Attaque imminente !",
+      "solvedBy": "Luke Triton",
+      "location": "Combat final",
+      "type": "Sélection",
+      "picarats": 65
+    },
+    {
+      "number": "141",
+      "name": "Fil rouge",
+      "solvedBy": "Emmy Altava",
+      "location": "Combat final",
+      "type": "Placement",
+      "picarats": 50
+    },
+    {
+      "number": "142",
+      "name": "Bouton mystère",
+      "solvedBy": "Emmy Altava",
+      "location": "Combat final",
+      "type": "Sélection",
+      "picarats": 45
+    },
+    {
+      "number": "143",
+      "name": "Catapulte à monter",
+      "solvedBy": "Professeur Layton",
+      "location": "Combat final",
+      "type": "Tracé de traits",
+      "picarats": 45
+    },
+    {
+      "number": "144",
+      "name": "Oiseaux célestes",
+      "solvedBy": "Professeur Layton",
+      "location": "Fond du lac",
+      "type": "Placement",
+      "picarats": 50
+    },
+    {
+      "number": "145",
+      "name": "Planète cubique",
+      "solvedBy": "Professeur Layton",
+      "location": "Hôtel",
+      "type": "Placement",
+      "picarats": 60
+    },
+    {
+      "number": "146",
+      "name": "Emprunt forcé",
+      "solvedBy": "Professeur Layton",
+      "location": "Laboratoire (int.)",
+      "type": "Écrire la réponse",
+      "picarats": 55
+    },
+    {
+      "number": "147",
+      "name": "Il faut faire bloc",
+      "solvedBy": "Professeur Layton",
+      "location": "Maison de la forêt",
+      "type": "Sélection",
+      "picarats": 50
+    },
+    {
+      "number": "148",
+      "name": "Par transparence",
+      "solvedBy": "Professeur Layton",
+      "location": "Usine désaffectée",
+      "type": "Écrire la réponse",
+      "picarats": 45
+    },
+    {
+      "number": "149",
+      "name": "Sans en avoir l'aire",
+      "solvedBy": "Professeur Layton",
+      "location": "Marché (est)",
+      "type": "QCM",
+      "picarats": 30
+    },
+    {
+      "number": "150",
+      "name": "Saute-nénuphar 1",
+      "solvedBy": "Professeur Layton",
+      "location": "Souterrain",
+      "type": "Stratégie",
+      "picarats": 50
+    },
+    {
+      "number": "151",
+      "name": "Minou, minou !",
+      "solvedBy": "Professeur Layton",
+      "location": "Réverbère tordu",
+      "type": "Stratégie",
+      "picarats": 30
+    },
+    {
+      "number": "152",
+      "name": "Bien pratique",
+      "solvedBy": "Professeur Layton",
+      "location": "Barrage",
+      "type": "QCM",
+      "picarats": 20
+    },
+    {
+      "number": "153",
+      "name": "L'art et la manière",
+      "solvedBy": "Professeur Layton",
+      "location": "Haut de la tour",
+      "type": "Écrire la réponse",
+      "picarats": 40
+    },
+    {
+      "number": "154",
+      "name": "Le courant passe",
+      "solvedBy": "Professeur Layton",
+      "location": "Chambre d'Arianna",
+      "type": "Puzzle",
+      "picarats": 60
+    },
+    {
+      "number": "155",
+      "name": "Par ici la sortie",
+      "solvedBy": "Professeur Layton",
+      "location": "Sentier",
+      "type": "Placement",
+      "picarats": 30
+    },
+    {
+      "number": "156",
+      "name": "Un peu de bon sens",
+      "solvedBy": "Professeur Layton",
+      "location": "Défis du professeur",
+      "type": "Sélection",
+      "picarats": 50
+    },
+    {
+      "number": "157",
+      "name": "Arrêt d'urgence 2",
+      "solvedBy": "Professeur Layton",
+      "location": "Défis du professeur",
+      "type": "Stratégie",
+      "picarats": 70
+    },
+    {
+      "number": "158",
+      "name": "Travail d'orfèvre",
+      "solvedBy": "Professeur Layton",
+      "location": "Défis du professeur",
+      "type": "Déplacements",
+      "picarats": 80
+    },
+    {
+      "number": "159",
+      "name": "Alerte à la bombe",
+      "solvedBy": "Professeur Layton",
+      "location": "Défis du professeur",
+      "type": "Déplacements",
+      "picarats": 99
+    },
+    {
+      "number": "160",
+      "name": "27 billes dorées",
+      "solvedBy": "Professeur Layton",
+      "location": "Défis du professeur",
+      "type": "Solitaire",
+      "picarats": 75
+    },
+    {
+      "number": "161",
+      "name": "Saute-nénuphar 2",
+      "solvedBy": "Professeur Layton",
+      "location": "Défis du professeur",
+      "type": "Stratégie",
+      "picarats": 99
+    },
+    {
+      "number": "162",
+      "name": "Maillet de cubes",
+      "solvedBy": "Professeur Layton",
+      "location": "Défis du professeur",
+      "type": "Placement",
+      "picarats": 50
+    },
+    {
+      "number": "163",
+      "name": "Croisée mère-fille",
+      "solvedBy": "Professeur Layton",
+      "location": "Défis du professeur",
+      "type": "Entourer",
+      "picarats": 70
+    },
+    {
+      "number": "164",
+      "name": "Boîte à bijoux",
+      "solvedBy": "Professeur Layton",
+      "location": "Défis du professeur",
+      "type": "Déplacements",
+      "picarats": 99
+    },
+    {
+      "number": "165",
+      "name": "Cubes à lier",
+      "solvedBy": "Professeur Layton",
+      "location": "Défis du professeur",
+      "type": "Tracé de traits",
+      "picarats": 60
+    },
+    {
+      "number": "166",
+      "name": "Plombier embrouillé",
+      "solvedBy": "Professeur Layton",
+      "location": "Défis du professeur",
+      "type": "Déplacements",
+      "picarats": 90
+    },
+    {
+      "number": "167",
+      "name": "Lâcher de bombe",
+      "solvedBy": "Professeur Layton",
+      "location": "Défis du professeur",
+      "type": "Trampolines",
+      "picarats": 70
+    },
+    {
+      "number": "168",
+      "name": "Verrou à boutons",
+      "solvedBy": "Professeur Layton",
+      "location": "Défis du professeur",
+      "type": "Sélection",
+      "picarats": 75
+    },
+    {
+      "number": "169",
+      "name": "Dédale obscur",
+      "solvedBy": "Professeur Layton",
+      "location": "Défis du professeur",
+      "type": "Labyrinthe",
+      "picarats": 99
+    },
+    {
+      "number": "170",
+      "name": "La grande échappée",
+      "solvedBy": "Professeur Layton",
+      "location": "Défis du professeur",
+      "type": "Déplacements",
+      "picarats": 99
+    }
+  ],
+  "minigames": [
+    {
+      "id": "miniexpress",
+      "number": "1",
+      "name": "MiniExpress"
+    },
+    {
+      "id": "miniexpress",
+      "number": "2",
+      "name": "MiniExpress"
+    },
+    {
+      "id": "miniexpress",
+      "number": "3",
+      "name": "MiniExpress"
+    },
+    {
+      "id": "miniexpress",
+      "number": "4",
+      "name": "MiniExpress"
+    },
+    {
+      "id": "miniexpress",
+      "number": "5",
+      "name": "MiniExpress"
+    },
+    {
+      "id": "miniexpress",
+      "number": "6",
+      "name": "MiniExpress"
+    },
+    {
+      "id": "miniexpress",
+      "number": "7",
+      "name": "MiniExpress"
+    },
+    {
+      "id": "miniexpress",
+      "number": "8",
+      "name": "MiniExpress"
+    },
+    {
+      "id": "miniexpress",
+      "number": "9",
+      "name": "MiniExpress"
+    },
+    {
+      "id": "miniexpress",
+      "number": "10",
+      "name": "MiniExpress"
+    },
+    {
+      "id": "poisson",
+      "number": "1",
+      "name": "Poisson"
+    },
+    {
+      "id": "poisson",
+      "number": "2",
+      "name": "Poisson"
+    },
+    {
+      "id": "poisson",
+      "number": "3",
+      "name": "Poisson"
+    },
+    {
+      "id": "poisson",
+      "number": "4",
+      "name": "Poisson"
+    },
+    {
+      "id": "poisson",
+      "number": "5",
+      "name": "Poisson"
+    },
+    {
+      "id": "poisson",
+      "number": "6",
+      "name": "Poisson"
+    },
+    {
+      "id": "poisson",
+      "number": "7",
+      "name": "Poisson"
+    },
+    {
+      "id": "poisson",
+      "number": "8",
+      "name": "Poisson"
+    },
+    {
+      "id": "poisson",
+      "number": "9",
+      "name": "Poisson"
+    },
+    {
+      "id": "poisson",
+      "number": "10",
+      "name": "Poisson"
+    },
+    {
+      "id": "marionnettes",
+      "number": "1",
+      "name": "Marionnettes"
+    },
+    {
+      "id": "marionnettes",
+      "number": "2",
+      "name": "Marionnettes"
+    },
+    {
+      "id": "marionnettes",
+      "number": "3",
+      "name": "Marionnettes"
+    }
+  ]
 }

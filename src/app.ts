@@ -11,7 +11,6 @@ declare global {
   interface Window {
     Module: Record<string, any>
     wasmReady: () => void
-    debug: Record<string, any>
   }
   interface Document {
     startViewTransition: any
@@ -31,19 +30,6 @@ const settings: WebSettings = local.store({
 })
 
 function onReady (): void {
-  window.debug = {}
-
-  if (import.meta.env.DEV) {
-    window.debug.loadState = (stateId: string) => { void nds.loadState(stateId) }
-    window.debug.saveState = (state = 'save') => { nds.saveState(state) }
-    window.debug.takeScreenshot = (screen: 0 | 1 = 1, name?: string) => { nds.takeScreenshot(screen, name) }
-    window.debug.saveAndScreen = (puzzle: string) => {
-      window.debug.saveState(`${settings.game}-${puzzle}`)
-      window.debug.takeScreenshot(1, puzzle)
-      location.reload()
-    }
-  }
-
   [...collectionToArray(document.getElementsByClassName('puzzle')), ...collectionToArray(document.getElementsByClassName('minigame'))]?.forEach(($puzzle) => {
     onClick($puzzle.getElementsByClassName('puzzle-play').item(0) as HTMLButtonElement, () => {
       void game?.resolve($puzzle.id).then(() => { foldNds(false) })

@@ -24,12 +24,17 @@ const WIN_SCREENS: DotByGame = {
     puzzle: [222, 165, 74],
     minigame: {
       minimobile: [255, 198, 140, 86, 55],
-      perroquet: [189, 90, 0, 86, 55]
+      perroquet: [189, 90, 0, 86, 55],
+      livre: [247, 140, 0, 254, 1]
     }
   },
   PL4: {
-    puzzle: [0, 0, 0],
-    minigame: {}
+    puzzle: [222, 165, 74],
+    minigame: {
+      miniexpress: [255, 198, 140, 66, 61],
+      poisson: [247, 206, 173, 85, 61],
+      marionnettes: [239, 132, 66, 67, 75]
+    }
   }
 }
 const LOSE_SCREENS: DotByGame = {
@@ -46,7 +51,7 @@ const LOSE_SCREENS: DotByGame = {
     minigame: {}
   },
   PL4: {
-    puzzle: [0, 0, 0],
+    puzzle: [115, 156, 156],
     minigame: {}
   }
 }
@@ -64,7 +69,7 @@ const LEAVE_SCREENS: DotByGame = {
     minigame: {}
   },
   PL4: {
-    puzzle: [0, 0, 0],
+    puzzle: [107, 173, 173],
     minigame: {}
   }
 }
@@ -82,7 +87,7 @@ const MENU_SCREENS: DotByGame = {
     minigame: {}
   },
   PL4: {
-    puzzle: [0, 0, 0],
+    puzzle: [165, 132, 74],
     minigame: {}
   }
 }
@@ -113,8 +118,12 @@ const LEAVE_RECTS: RectByGame = {
     }
   },
   PL4: {
-    puzzle: new DOMRect(0, 0, 0, 0),
-    minigame: {}
+    puzzle: new DOMRect(195, 30, 65, 30),
+    minigame: {
+      miniexpress: new DOMRect(180, 160, 80, 40),
+      poisson: new DOMRect(200, 165, 60, 35),
+      marionnettes: new DOMRect(190, 165, 80, 35)
+    }
   }
 }
 
@@ -129,10 +138,14 @@ enum PuzzleResult {
 }
 
 export default class Game {
+  public static readonly STATE_LOAD_TIME = 500
+  public static readonly RESOLVE_THROTTLE_TIME = 2000
+
   private readonly nds: NDS
   private readonly _game: GameType
   private _type: PuzzleType
   private _state: string | null
+  private _stateId: string | null
   private _res: PuzzleResult
   private readonly _resolve: (stateId: string) => Promise<void>
   private readonly $games: HTMLElement | null
@@ -146,13 +159,14 @@ export default class Game {
         this.nds.unlock()
         setTimeout(() => {
           this._res = PuzzleResult.None
-        }, 500)
+        }, Game.STATE_LOAD_TIME)
       })
-    }, () => { this.toggleResolve(false) }, 2000)
+    }, () => { this.toggleResolve(false) }, Game.RESOLVE_THROTTLE_TIME)
 
     this._game = game
     this._type = 'puzzle'
     this._state = null
+    this._stateId = null
     this._res = PuzzleResult.None
     this.nds.addEventListener('started', () => { this.toggleResolve(false) })
   }
@@ -172,7 +186,8 @@ export default class Game {
     if (type == null) throw new Error('Invalid puzzle type')
     this.toggleResolve(true)
     this._type = type
-    this._state = stateId.split('-').slice(1).join('-')
+    this._state = stateId.replace(/PL\d-/, '')
+    this._stateId = this._state.split('-')[0]
     await this._resolve(stateId)
   }
 
@@ -192,29 +207,28 @@ export default class Game {
   }
 
   private checkDot (dotB: DotRGB): boolean {
-    const dotA = this.nds.getDot(NDSScreen.Bottom, Math.max(dotB[3] ?? 1), Math.max(dotB[4] ?? 1))
+    const dotA = this.nds.getDot(NDSScreen.Bottom, Math.max(dotB[3] ?? 1, 1), Math.max(dotB[4] ?? 1, 1))
     return dotB[0] === dotA[0] && dotB[1] === dotA[1] && dotB[2] === dotA[2]
   }
 
   private get isOnLeaveButton (): boolean {
-    if (this._state == null) return false
+    if (this._stateId == null) return false
     let rect: DOMRect | undefined
     if (this._type === 'puzzle') rect = LEAVE_RECTS[this._game][this._type]
-    else rect = LEAVE_RECTS[this._game][this._type][this._state]
+    else rect = LEAVE_RECTS[this._game][this._type][this._stateId]
     return this.nds.isInRect(rect)
   }
 
   private listenPuzzleResult (): void {
-    setInterval(() => {
-      if (!this.nds.isPlaying || this._res !== PuzzleResult.None) return
-      this._res = this.getPuzzleResult()
-      if (this._res === PuzzleResult.None) {
-        if (this.isOnLeaveButton) this.nds.lock()
-        else this.nds.unlock()
-        return
-      }
-      this.endPuzzleProcess()
-    }, 1)
+    window.requestAnimationFrame(() => { this.listenPuzzleResult() })
+    if (!this.nds.isPlaying || this._res !== PuzzleResult.None) return
+    this._res = this.getPuzzleResult()
+    if (this._res === PuzzleResult.None) {
+      if (this.isOnLeaveButton) this.nds.lock()
+      else this.nds.unlock()
+      return
+    }
+    this.endPuzzleProcess()
   }
 
   private endPuzzleProcess (): void {
@@ -222,6 +236,10 @@ export default class Game {
     if (this._res === PuzzleResult.Leave) {
       void this.nds.reloadState()
       this.nds.unlock()
+      this._res = PuzzleResult.Leave
+      setTimeout(() => {
+        this._res = PuzzleResult.None
+      }, Game.STATE_LOAD_TIME)
     } else if (this._res === PuzzleResult.Win) {
       this.nds.dispatchEvent(new CustomEvent('solved', { detail: `${this._game}-${this._state ?? ''}` }))
     }
