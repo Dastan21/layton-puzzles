@@ -1,3 +1,3 @@
 # States
 
-Savestates of each puzzle for each game: `gameId`-`number`.state (or `gameId`-`minigameId`.state)
+Savestates of each puzzle for each game: `gameId`-`number`.state (or `gameId`-`minigameId`-`number`.state)
