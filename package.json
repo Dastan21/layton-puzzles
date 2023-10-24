@@ -2,6 +2,7 @@
   "name": "layton-puzzles",
   "version": "1.0.0",
   "type": "module",
+  "author": "Dastan21",
   "scripts": {
     "dev": "npx vite",
     "build": "npx tsc && npx vite build",
