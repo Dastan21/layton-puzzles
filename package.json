@@ -7,7 +7,7 @@
     "dev": "npx vite",
     "build": "npx tsc && npx vite build",
     "preview": "npx vite preview",
-    "lint": "npx eslint ."
+    "lint": "npx eslint src/**"
   },
   "devDependencies": {
     "@types/gzip-js": "^0.3.4",

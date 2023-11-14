@@ -94,7 +94,7 @@ export default class Select extends HTMLElement {
   }
 
   public toggleSelect (key: string, force?: boolean): void {
-    const val = force == null ? !this.$selected.has(key) : force
+    const val = force ?? !this.$selected.has(key)
     if (val) this.select(key)
     else this.unselect(key)
 

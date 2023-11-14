@@ -134,21 +134,31 @@ const style = `
   }
 
   .overlay .content {
+    display: flex;
+    flex-direction: column;
     font-size: 32px;
     font-weight: bold;
     color: var(--beige);
     z-index: 1;
   }
 
-  @keyframes rotate{
+  @keyframes rotate {
     to { transform: rotate(360deg); }
   }
 
-  .overlay .content > svg {
+  .overlay .content svg {
     width: 64px;
     height: 64px;
     color: var(--brown);
     animation: rotate 6s linear infinite;
+  }
+
+  .overlay .content .percent {
+    margin-top: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--brown);
   }
 
   .hidden, .fold {
@@ -205,6 +215,7 @@ export default class NDS extends HTMLElement {
   private _microphone: boolean
 
   private $overlay: HTMLElement | null = null
+  private $percent: HTMLElement | null = null
 
   // settings
   private _settings: NDSSettings
@@ -277,7 +288,13 @@ export default class NDS extends HTMLElement {
     this.$overlay.classList.add('overlay')
     const $overlayContent = document.createElement('div')
     $overlayContent.classList.add('content')
-    $overlayContent.innerHTML = '<svg><use href="/assets/icons-sprite.svg#gear"></use></svg>'
+    const $loading = document.createElement('div')
+    $loading.innerHTML = '<svg><use href="/assets/icons-sprite.svg#gear"></use></svg>'
+    $overlayContent.append($loading)
+    this.$percent = document.createElement('span')
+    this.$percent.classList.add('percent')
+    this.$percent.textContent = ''
+    $overlayContent.append(this.$percent)
     const $overlayBackground = document.createElement('div')
     $overlayBackground.classList.add('background')
     this.$overlay.append($overlayContent, $overlayBackground)
@@ -355,7 +372,7 @@ export default class NDS extends HTMLElement {
   private async loadRom (romName: string): Promise<void> {
     this.$overlay?.classList.remove('hidden')
 
-    const buffer = await fetchFile(`/roms/${romName}.nds`)
+    const buffer = await fetchFile(`/roms/${romName}.nds`, { progress: (p) => { this.progress(p) } })
     if (buffer == null) return
     if (buffer.byteLength < 1024) return
 
@@ -455,6 +472,11 @@ export default class NDS extends HTMLElement {
   public async reloadState (): Promise<void> {
     if (this._savestate == null) return
     await this.loadState(this._savestate)
+  }
+
+  private progress (percent: number): void {
+    if (this.$percent == null) return
+    this.$percent.textContent = percent + '%'
   }
 
   private runFrame (): void {
