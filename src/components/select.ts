@@ -93,12 +93,15 @@ export default class Select extends HTMLElement {
     })
   }
 
-  public toggleSelect (key: string, force?: boolean): void {
-    const val = force ?? !this.$selected.has(key)
-    if (val) this.select(key)
-    else this.unselect(key)
+  public toggleSelect (keys: string | string[], force?: boolean): void {
+    if (typeof keys === 'string') keys = [keys]
+    for (const key of keys) {
+      const val = force ?? !this.$selected.has(key)
+      if (val) this.select(key)
+      else this.unselect(key)
 
-    if (this.list != null) this.$options.get(key)?.classList.toggle('active', val)
+      if (this.list != null) this.$options.get(key)?.classList.toggle('active', val)
+    }
     this.dispatchEvent(new Event('change'))
   }
 

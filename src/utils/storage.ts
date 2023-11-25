@@ -15,6 +15,7 @@ function get (key: string): string | null {
 function store<T extends object> (data: T): T {
   return new Proxy<T>(data, {
     get (obj, prop) {
+      if (prop.toString().startsWith('_')) return obj[prop as keyof T]
       const value = get(String(prop)) ?? obj[prop as keyof T]
       if (Array.isArray(value)) return value
       try {
@@ -25,7 +26,7 @@ function store<T extends object> (data: T): T {
     },
     set (target, prop, value) {
       target[prop as keyof T] = value
-      set(String(prop), JSON.stringify(value))
+      if (!prop.toString().startsWith('_')) set(String(prop), JSON.stringify(value))
       return true
     }
   })

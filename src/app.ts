@@ -12,21 +12,32 @@ declare global {
     Module: Record<string, any>
     wasmReady: () => void
   }
-  interface Document {
-    startViewTransition: any
-  }
+}
+
+interface Filters {
+  name: string
+  selects: Record<string, string[]>
+  showReset: boolean
 }
 
 interface WebSettings extends NDSSettings {
   game: GameType
   solved: string[]
+  _filters: Filters
 }
 
 const settings: WebSettings = local.store({
   volume: 0.5,
   mute: false,
   game: 'PL1',
-  solved: []
+  solved: [],
+  _filters: {
+    name: '',
+    selects: {},
+    get showReset () {
+      return !(this.name.length > 0 || Object.values<string[]>(this.selects).some((s) => s.length > 0))
+    }
+  }
 })
 
 function onReady (): void {
@@ -59,10 +70,15 @@ function initNds (): void {
   nds.updateSettings(settings)
   const $tabs = document.getElementById('game-tabs') as Tabs
   $tabs.addEventListener('change', () => {
-    const key = $tabs.key
-    if (settings.game !== key) {
-      settings.game = key as GameType
+    if (settings.game !== $tabs.key) {
+      settings.game = $tabs.key as GameType
       unload()
+
+      const url = new URL(location.href)
+      url.search = ''
+      url.pathname = $tabs.key
+      history.replaceState({}, '', url)
+
       setTimeout(() => {
         location.reload()
       }, 200)
@@ -94,25 +110,11 @@ function initNds (): void {
   })
 }
 
-interface Filters {
-  name: string[]
-  selects: Record<string, string[]>
-  showReset: boolean
-}
-
 function initFilters (): void {
-  collectionToArray(document.getElementsByClassName('game ')).forEach(($game) => {
+  collectionToArray(document.getElementsByClassName('game')).forEach(($game) => {
     const $filterName = $game.getElementsByClassName('puzzle-filter-name').item(0) as HTMLInputElement
     const $filterSelects = collectionToArray($game.getElementsByTagName('pl-select') as HTMLCollection) as Select[]
     const $filterReset = $game.getElementsByClassName('puzzle-filter-reset').item(0) as HTMLButtonElement
-
-    const filters: Filters = {
-      name: [],
-      selects: {},
-      get showReset () {
-        return !(this.name.length > 0 || Object.values(this.selects).some((s) => s.length > 0))
-      }
-    }
 
     // filter puzzles
     const filter = (): void => {
@@ -122,11 +124,11 @@ function initFilters (): void {
       let count = 0
       $puzzles.forEach(($p) => {
         const name = normalize($p.getElementsByClassName('puzzle-name').item(0)?.textContent ?? '')
-        const filterByName = filters.name.every((v) => name?.includes(v))
-        const filterBySelects = Object.keys(filters.selects).every((key) => {
+        const filterByName = settings._filters.name.split(' ').every((v) => name?.includes(v))
+        const filterBySelects = Object.keys(settings._filters.selects).every((key) => {
           const $info = $p.getElementsByClassName(`puzzle-info-${key}`).item(0)
           const select = normalize($info?.getElementsByClassName('puzzle-info-value').item(0)?.textContent ?? '').replace(/ /g, '-')
-          return filters.selects[key].length <= 0 || filters.selects[key].includes(select)
+          return settings._filters.selects[key].length <= 0 || settings._filters.selects[key].includes(select)
         })
         const show = filterByName && filterBySelects
         if (show) count += 1
@@ -134,21 +136,40 @@ function initFilters (): void {
       })
       const $resCount = $game.getElementsByClassName('filter-results').item(0) as HTMLElement
       $resCount.innerText = `${count} résultat${count > 1 ? 's' : ''}`
-      $filterReset.disabled = filters.showReset
+      $filterReset.disabled = settings._filters.showReset
+
+      // update url
+      const url = new URL(location.href)
+      url.search = ''
+      const name = settings._filters.name
+      if (name != null && name !== '') url.searchParams.set('name', name)
+      Object.keys(settings._filters.selects).forEach((key) => {
+        settings._filters.selects[key].forEach((val) => {
+          url.searchParams.append(key, val)
+        })
+      })
+      history.replaceState({}, '', url)
     }
 
+    $filterName.value = settings._filters.name
+    $filterName.classList.toggle('filtering', settings._filters.name.length > 0)
     onInput($filterName, ($input) => {
-      const values = normalize($input.value ?? '').split(/\s/).filter((s) => s.length > 0)
-      $input.classList.toggle('filtering', values.join('').length > 0)
-      filters.name = values
+      const name = normalize($input.value ?? '').split(/\s/).filter((s) => s.length > 0).join(' ')
+      settings._filters.name = name
+      $input.classList.toggle('filtering', name.length > 0)
       filter()
     })
 
     $filterSelects.forEach(($select, i) => {
+      const type = $select.getAttribute('data-type') ?? ''
+      $select.toggleSelect(settings._filters.selects[type] ?? [])
+      $select.classList.toggle('filtering', $select.value.length > 0)
+
       $select.style.zIndex = String(10 + $filterSelects.length - i)
       $select.addEventListener('change', () => {
+        const type = $select.getAttribute('data-type') ?? ''
+        settings._filters.selects[type] = $select.value
         $select.classList.toggle('filtering', $select.value.length > 0)
-        filters.selects[$select.getAttribute('data-type') ?? ''] = $select.value
         filter()
       })
     })
@@ -158,7 +179,14 @@ function initFilters (): void {
       $filterName.value = ''
       $filterName.dispatchEvent(new Event('input'))
       $filterSelects.forEach(($select) => { $select.reset() })
+      settings._filters = {
+        name: '',
+        selects: {},
+        showReset: false
+      }
     })
+
+    filter()
   })
 }
 
@@ -178,10 +206,37 @@ function unload (): void {
   }, 0)
 }
 
+function parseUrl (): void {
+  // get url
+  const url = new URL(location.href)
+  const gameType = url.pathname.replace(/^\//, '')
+  if (['PL1', 'PL2', 'PL3', 'PL4'].includes(gameType)) {
+    settings.game = gameType as GameType
+  }
+  settings._filters.name = url.searchParams.get('name') ?? ''
+  const selects: Record<string, string[]> = {}
+  for (const $select of collectionToArray(document.getElementById(settings.game)?.getElementsByTagName('pl-select') as HTMLCollection)) {
+    const type = $select.getAttribute('data-type') ?? ''
+    selects[type] = url.searchParams.getAll(type) ?? []
+  }
+  settings._filters.selects = selects
+
+  // set url
+  url.pathname = settings.game
+  history.replaceState({}, '', url)
+}
+
 // on load
+parseUrl()
 const game = new Game(settings.game)
 document.body.setAttribute('data-game', settings.game)
 const nds = document.getElementById('nds') as NDS
+document.title = {
+  PL1: 'Professeur Layton et l\'Étrange Village',
+  PL2: 'Professeur Layton et la Boîte de Pandore',
+  PL3: 'Professeur Layton et le Destin perdu',
+  PL4: 'Professeur Layton et l\'Appel du Spectre'
+}[settings.game]
 
 window.wasmReady = onReady
 
