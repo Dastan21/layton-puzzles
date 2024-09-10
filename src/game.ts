@@ -87,7 +87,7 @@ const MENU_SCREENS: DotByGame = {
     minigame: {}
   },
   PL4: {
-    puzzle: [165, 132, 74],
+    puzzle: [231, 206, 140, 16, 1],
     minigame: {}
   }
 }
