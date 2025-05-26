@@ -30,6 +30,6 @@ export async function fetchFile (filePath: string, options?: FetchFileOptions): 
   }
 
   if (fileBuf == null) return null
-  await ndsdb.set(filePath, new Uint8Array(fileBuf))
+  await ndsdb.set(filePath, new Uint8Array(fileBuf).buffer)
   return fileBuf
 }

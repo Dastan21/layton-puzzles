@@ -44,6 +44,7 @@ export default class Select extends HTMLElement {
   private list: HTMLElement | null = null
   private readonly $options: Map<string, HTMLElement>
   private readonly $selected: Set<string>
+  private readonly _multiple: boolean
   private _state: boolean
 
   constructor () {
@@ -51,6 +52,7 @@ export default class Select extends HTMLElement {
 
     this.$options = new Map()
     this.$selected = new Set()
+    this._multiple = this.hasAttribute('data-multiple')
     this._state = false
 
     addEventListener('click', (e) => {
@@ -81,7 +83,7 @@ export default class Select extends HTMLElement {
     })
 
     // init options
-    const $options = $listSlot.assignedNodes().filter(($o) => $o instanceof HTMLElement) as HTMLElement[]
+    const $options = $listSlot.assignedNodes().filter(($o) => $o instanceof HTMLElement)
     $options.forEach(($option) => {
       const key = normalize($option.textContent ?? '').replace(/ /g, '-')
       this.$options.set(key, $option)
@@ -100,12 +102,18 @@ export default class Select extends HTMLElement {
       if (val) this.select(key)
       else this.unselect(key)
 
-      if (this.list != null) this.$options.get(key)?.classList.toggle('active', val)
+      if (this.list != null) {
+        this.$options.keys().forEach((key) => {
+          this.$options.get(key)?.classList.toggle('active', this.$selected.has(key))
+        })
+      }
     }
     this.dispatchEvent(new Event('change'))
   }
 
   public select (key: string): void {
+    if (!this._multiple) this.$selected.clear()
+
     this.$selected.add(key)
   }
 

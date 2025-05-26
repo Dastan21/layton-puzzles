@@ -120,15 +120,22 @@ function initFilters (): void {
     const filter = (): void => {
       const $puzzlesList = $game.getElementsByClassName('game-puzzles').item(0)
       if ($puzzlesList == null) return
+
       const $puzzles = collectionToArray($puzzlesList.getElementsByClassName('puzzle'))
       let count = 0
       $puzzles.forEach(($p) => {
         const name = normalize($p.getElementsByClassName('puzzle-name').item(0)?.textContent ?? '')
         const filterByName = settings._filters.name.split(' ').every((v) => name?.includes(v))
         const filterBySelects = Object.keys(settings._filters.selects).every((key) => {
-          const $info = $p.getElementsByClassName(`puzzle-info-${key}`).item(0)
-          const select = normalize($info?.getElementsByClassName('puzzle-info-value').item(0)?.textContent ?? '').replace(/ /g, '-')
-          return settings._filters.selects[key].length <= 0 || settings._filters.selects[key].includes(select)
+          if (key === 'solved') {
+            if (settings._filters.selects[key].includes('oui')) return $p.classList.contains('solved')
+            else if (settings._filters.selects[key].includes('non')) return !$p.classList.contains('solved')
+            return true
+          } else {
+            const $info = $p.getElementsByClassName(`puzzle-info-${key}`).item(0)
+            const select = normalize($info?.getElementsByClassName('puzzle-info-value').item(0)?.textContent ?? '').replace(/ /g, '-')
+            return settings._filters.selects[key].length <= 0 || settings._filters.selects[key].includes(select)
+          }
         })
         const show = filterByName && filterBySelects
         if (show) count += 1

@@ -47,15 +47,21 @@
                   <div class="collapse-content">
                     <div class="game-puzzles-filter">
                       <input class="puzzle-filter-name input" type="text" title="Rechercher" placeholder="Rechercher...">
-                      <% Object.keys(translations).forEach(label=> { %>
-                        <pl-select data-type="<%= label %>">
-                          <button class="button" slot="button" title="<%= translations[label] %>">
+                      <% Object.keys(filters).forEach(label=> { %>
+                        <pl-select data-type="<%= label %>" <%= label !== 'solved' ? 'data-multiple' : '' %>>
+                          <button class="button" slot="button" title="<%= filters[label] %>">
                             <svg class="icon"><use href="/assets/icons-sprite.svg#puzzle-<%= label %>"></use></svg>
-                            <span><%= translations[label] %></span>
+                            <span><%= filters[label] %></span>
                           </button>
-                          <% Array.from(new Set(game.puzzles.filter(p => p[label]).map(p => p[label]))).forEach(item => { %>
-                            <span><%= item %></span>
-                          <% }) %>
+                          <% if (label === 'solved') { %>
+                            <% ["Oui", "Non"].forEach(item => { %>
+                              <span><%= item %></span>
+                            <% }) %>
+                          <% } else { %>
+                            <% Array.from(new Set(game.puzzles.filter(p => p[label]).map(p => p[label]))).forEach(item => { %>
+                              <span><%= item %></span>
+                            <% }) %>
+                          <% }%>
                         </pl-select>
                       <% }) %>
                       <button class="puzzle-filter-reset button" disabled><span>Réinitialiser</span></button>
@@ -80,10 +86,10 @@
                             </button>
                           </div>
                           <div class="puzzle-infos">
-                            <% Object.keys(translations).forEach(label => { %>
+                            <% Object.keys(filters).forEach(label => { %>
                               <% if (puzzle[label]) { %>
                                 <div class="puzzle-info puzzle-info-<%= label %>">
-                                  <span class="puzzle-info-label badge" title="<%= translations[label] %>">
+                                  <span class="puzzle-info-label badge" title="<%= filters[label] %>">
                                     <svg class="icon"><use href="/assets/icons-sprite.svg#puzzle-<%= label %>"></use></svg>
                                   </span>
                                   <span class="puzzle-info-value"><%= puzzle[label] %></span>

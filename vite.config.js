@@ -10,11 +10,12 @@ export default defineConfig({
   plugins: [
     ViteEjsPlugin({
       games: [PL1, PL2, PL3, PL4],
-      translations: {
+      filters: {
         type: 'Type d\'énigme',
         location: 'Lieu',
         solvedBy: 'Résolue par',
-        givenBy: 'Proposée par'
+        givenBy: 'Proposée par',
+        solved: 'Résolue',
       }
     })
   ]

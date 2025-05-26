@@ -53,9 +53,9 @@ class NDSDB {
     })
   }
 
-  public async get (key: string): Promise<Uint8Array | null> {
+  public async get (key: string): Promise<ArrayBuffer | null> {
     const db = await this.open()
-    let state: Uint8Array | null
+    let state: ArrayBuffer | null
     return await new Promise((resolve) => {
       const transaction = db.transaction(NDSDB.STORE_NAME)
       const objectStore = transaction.objectStore(NDSDB.STORE_NAME)
@@ -70,7 +70,7 @@ class NDSDB {
     })
   }
 
-  public async set (key: string, state: Uint8Array): Promise<void> {
+  public async set (key: string, state: ArrayBuffer): Promise<void> {
     if (state == null) throw new Error('State is null')
     const db = await this.open()
     const transaction = db.transaction(NDSDB.STORE_NAME, 'readwrite')
